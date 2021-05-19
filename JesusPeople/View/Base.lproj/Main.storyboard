@@ -11,7 +11,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,13 +19,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wp2936340-church-background" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-xb-T6H">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76W-GV-53B">
-                                <rect key="frame" x="34" y="126" width="220" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
-                                <color key="textColor" red="0.102357842" green="0.063138298689999997" blue="0.17532482739999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="line.horizontal.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6qe-sN-P7i">
                                 <rect key="frame" x="40" y="45" width="50" height="40.5"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -34,21 +27,24 @@
                                     <constraint firstAttribute="height" constant="50" id="nWc-tj-NCk"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Jesus' People Chapel International" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpL-Wp-RT0">
-                                <rect key="frame" x="36" y="194" width="373" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="To Jesus' People Chapel International" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJp-wb-dxi">
+                                <rect key="frame" x="10" y="163" width="404" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_1256-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="CMP-wE-OS8">
-                                <rect key="frame" x="96" y="268" width="240" height="284"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76W-GV-53B">
+                                <rect key="frame" x="10" y="100" width="404" height="55"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="46"/>
+                                <color key="textColor" red="0.102357842" green="0.063138298689999997" blue="0.17532482739999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="IMG_1256-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="tzG-yx-GqR">
+                                <rect key="frame" x="0.0" y="203.5" width="414" height="438"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;A church for practical christianity&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sav-5y-pmS">
-                                <rect key="frame" x="41" y="594" width="332" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;A church for practical christianity&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sav-5y-pmS">
+                                <rect key="frame" x="0.0" y="691.5" width="414" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -56,12 +52,25 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="sav-5y-pmS" firstAttribute="top" secondItem="tzG-yx-GqR" secondAttribute="bottom" constant="50" id="D6C-SG-fOn"/>
                             <constraint firstItem="vWQ-xb-T6H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DS8-C8-foC"/>
+                            <constraint firstItem="76W-GV-53B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Fqu-LE-3kL"/>
+                            <constraint firstItem="76W-GV-53B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="K43-rj-ePK"/>
+                            <constraint firstItem="tzG-yx-GqR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LvQ-Hp-BnK"/>
+                            <constraint firstItem="76W-GV-53B" firstAttribute="top" secondItem="6qe-sN-P7i" secondAttribute="bottom" constant="10" id="VTE-cA-XuF"/>
+                            <constraint firstItem="OJp-wb-dxi" firstAttribute="top" secondItem="76W-GV-53B" secondAttribute="bottom" constant="8" id="YkV-Ru-cP8"/>
                             <constraint firstItem="6qe-sN-P7i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="bl9-YM-iGb"/>
                             <constraint firstAttribute="bottom" secondItem="vWQ-xb-T6H" secondAttribute="bottom" id="ccC-mR-mC0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sav-5y-pmS" secondAttribute="bottom" constant="100" id="gKK-wX-yaY"/>
+                            <constraint firstItem="sav-5y-pmS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iBf-Gg-c0v"/>
+                            <constraint firstItem="OJp-wb-dxi" firstAttribute="trailing" secondItem="76W-GV-53B" secondAttribute="trailing" id="iy7-B0-yff"/>
                             <constraint firstItem="vWQ-xb-T6H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="moe-Iz-zJ9"/>
                             <constraint firstItem="6qe-sN-P7i" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="nRr-mk-Fcp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vWQ-xb-T6H" secondAttribute="trailing" id="omC-7y-Fpj"/>
+                            <constraint firstItem="tzG-yx-GqR" firstAttribute="top" secondItem="OJp-wb-dxi" secondAttribute="bottom" constant="20" id="sA5-6i-Lts"/>
+                            <constraint firstItem="sav-5y-pmS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="v8c-Lx-soO"/>
+                            <constraint firstItem="OJp-wb-dxi" firstAttribute="leading" secondItem="76W-GV-53B" secondAttribute="leading" id="wja-LL-d3k"/>
+                            <constraint firstItem="tzG-yx-GqR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zSW-BU-eIg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="fUz-gd-8cM">
@@ -70,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1643.4782608695652" y="-498.88392857142856"/>
+            <point key="canvasLocation" x="1853.6231884057972" y="-509.59821428571428"/>
         </scene>
         <!--Sermons-->
         <scene sceneID="gEK-ax-gnP">
@@ -232,6 +241,115 @@
             </objects>
             <point key="canvasLocation" x="3085.507246376812" y="189.50892857142856"/>
         </scene>
+        <!--Root View Controller-->
+        <scene sceneID="swF-Hj-8I9">
+            <objects>
+                <tableViewController id="Sx1-I2-Ck3" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uDi-50-QZU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="FBj-TG-J2E">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3b2-OZ-hLI">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3b2-OZ-hLI" id="igP-bl-ZSJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETH-7i-DMd">
+                                                    <rect key="frame" x="48" y="11" width="86" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="y6v-g6-vK1">
+                                        <rect key="frame" x="0.0" y="68" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y6v-g6-vK1" id="V5r-po-E44">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bishop's Corner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQ2-Ub-pHp">
+                                                    <rect key="frame" x="48" y="11" width="122" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="YLp-rh-Rbo">
+                                        <rect key="frame" x="0.0" y="111.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YLp-rh-Rbo" id="cgy-cP-DET">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Social Media" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqR-N2-jh8">
+                                                    <rect key="frame" x="49" y="11" width="97" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="a9s-ro-K2E">
+                                        <rect key="frame" x="0.0" y="155" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a9s-ro-K2E" id="MRC-vK-Cze">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Our Ministries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pk-oS-Tpd">
+                                                    <rect key="frame" x="47" y="11" width="106" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Sx1-I2-Ck3" id="rGe-jI-0JN"/>
+                            <outlet property="delegate" destination="Sx1-I2-Ck3" id="mKH-EF-Vag"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="t8U-EB-th2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLx-Vz-kje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367" y="-649"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="vf5-dY-lf7">
+            <objects>
+                <navigationController id="2WJ-7V-BeZ" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7qP-mf-4vt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Sx1-I2-Ck3" kind="relationship" relationship="rootViewController" id="rhG-Ee-Lur"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RbR-Tc-JFX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-523" y="-649"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xqe-Mr-vvX">
             <objects>
@@ -255,7 +373,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Pg-e7-XSs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="733.33333333333337" y="-498.88392857142856"/>
+            <point key="canvasLocation" x="1052" y="-579"/>
         </scene>
     </scenes>
     <resources>
