@@ -1,24 +1,20 @@
 //
-//  WelcomeViewController.swift
+//  MenuViewController.swift
 //  JesusPeople
 //
 //  Created by Desiree on 5/19/21.
 //
 
 import UIKit
-import SideMenu
 
-class WelcomeViewController: UIViewController {
- 
+class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-      
 
         // Do any additional setup after loading the view.
     }
-  
+    
 
     /*
     // MARK: - Navigation
