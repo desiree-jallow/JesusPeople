@@ -153,8 +153,24 @@
                     <view key="view" contentMode="scaleToFill" id="hQd-9R-472">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMc-na-166">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="11q-vE-exo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eMc-na-166" firstAttribute="top" secondItem="11q-vE-exo" secondAttribute="top" id="2rT-lr-LMg"/>
+                            <constraint firstItem="eMc-na-166" firstAttribute="trailing" secondItem="11q-vE-exo" secondAttribute="trailing" id="c5j-od-gPR"/>
+                            <constraint firstItem="eMc-na-166" firstAttribute="leading" secondItem="11q-vE-exo" secondAttribute="leading" id="c7v-s2-HEr"/>
+                            <constraint firstAttribute="bottom" secondItem="eMc-na-166" secondAttribute="bottom" id="ec0-Ir-fgX"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="uBe-HI-BZP">
@@ -169,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwd-kc-AdN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5061" y="190"/>
+            <point key="canvasLocation" x="5060.8695652173919" y="189.50892857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YSD-3d-q7h">
@@ -376,6 +392,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wZy-DG-CtN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hEY-Tb-V2Z">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -516,7 +533,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2fB-H2-D9j"/>
+        <segue reference="AwX-SQ-2yz"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
