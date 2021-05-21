@@ -9,17 +9,23 @@ import UIKit
 import SideMenu
 
 class WelcomeViewController: UIViewController {
- 
+    @IBOutlet weak var welcomeImageView: UIImageView!
 
+    @IBOutlet weak var shadowView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-      
+        shadowView.layer.cornerRadius = 100
+//
+//        let darkBlur = UIBlurEffect(style: .regular)
+//            let blurView = UIVisualEffectView(effect: darkBlur)
+//            blurView.frame = welcomeImageView.bounds
+//            welcomeImageView.addSubview(blurView)
 
         // Do any additional setup after loading the view.
     }
   
-
+   
+    
     /*
     // MARK: - Navigation
 
