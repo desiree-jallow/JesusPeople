@@ -8,21 +8,72 @@
 import Foundation
 
 struct SermonsDataManger {
-    //search quiery to retrieve the 
+    static var instance = SermonsDataManger()
+    //retrieve the videoIDs with playlistURL
+    var videoIds = [String]()
     
+    func performRequest(with urlString: String, completionHandler: @escaping () -> Void) {
+        
+        //Create a url
+        if let url = URL(string: urlString) {
+            //create url session
+            let session = URLSession.shared
+            //give session a task
+            
+            let task =  session.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    return
+                }
+                //parse data
+                if let safeData = data {
+                    
+                    if let ids = self.getVideoIDs(safeData) {
+                        
+                        SermonsDataManger.instance.videoIds = ids
+                        completionHandler()
+                        
+                        
+                    }
+                }
+                
+            }
+            task.resume()
+        }
+    }
     
-    //video quiery
-   
-    let channelId = "UCDzdO9eXlpKUxP3FI5q-T8Q"
-    let playlistId = "UUDzdO9eXlpKUxP3FI5q-T8Q"
-    let exampleVideoId = "3EUs1Y4ZHPc"
-    
-    let playListUrl = URL(string: "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUDzdO9eXlpKUxP3FI5q-T8Q&key=AIzaSyBALl3j6ofr3CR0QQD6xAiI45zU2riAatM")
-    
-    let videoUrl = URL(string:  "https://www.googleapis.com/youtube/v3/videos?part=snippet,liveStreamingDetails&id=3EUs1Y4ZHPc&key=AIzaSyBALl3j6ofr3CR0QQD6xAiI45zU2riAatM")
-    
-   //put all video ids in an array
-    //search for all the video ids
-   
-    
+    //parse data and set up weather model
+    func getVideoIDs(_ playListData: Data) -> [String]? {
+        let decoder = JSONDecoder()
+        var videoIDArray:[String] = []
+        do {
+            //Parse JSON
+            
+            do {
+                let playlistModel = try decoder.decode(PlaylistDataModel.self, from: playListData)
+                
+                for int in 0..<playlistModel.items.count {
+                    videoIDArray.append(playlistModel.items[int].contentDetails.videoId)
+                   
+                }
+                
+                
+            } catch  {
+                print(error)
+            }
+            
+        }
+        return videoIDArray
+    }
 }
+    
+        
+  
+    //put all video ids in an array
+    
+   
+   
+    //retreive video info using videoIDs from playlistURL using videoURL
+   
+    
+
+
