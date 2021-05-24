@@ -12,10 +12,17 @@ struct SermonsDataManger {
     
     
     //video quiery
-    let videosUrl = URL(string: "https://www.googleapis.com/youtube/v3/videos/key=\(Constants.apiKey)part=videos")
+   
+    let channelId = "UCDzdO9eXlpKUxP3FI5q-T8Q"
+    let playlistId = "UUDzdO9eXlpKUxP3FI5q-T8Q"
+    let exampleVideoId = "3EUs1Y4ZHPc"
     
-    let channelsUrl = URL(string: "https://www.googleapis.com/youtube/v3/channels/key=AIzaSyBALl3j6ofr3CR0QQD6xAiI45zU2riAatM/part=snippet,id/forUsername=")
+    let playListUrl = URL(string: "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUDzdO9eXlpKUxP3FI5q-T8Q&key=AIzaSyBALl3j6ofr3CR0QQD6xAiI45zU2riAatM")
     
-    //first retreive the channelID
+    let videoUrl = URL(string:  "https://www.googleapis.com/youtube/v3/videos?part=snippet,liveStreamingDetails&id=3EUs1Y4ZHPc&key=AIzaSyBALl3j6ofr3CR0QQD6xAiI45zU2riAatM")
+    
+   //put all video ids in an array
+    //search for all the video ids
+   
     
 }
