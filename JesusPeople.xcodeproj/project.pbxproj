@@ -14,7 +14,6 @@
 		D7432F7926555F800044E521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7432F7826555F800044E521 /* Assets.xcassets */; };
 		D7432F7C26555F800044E521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7432F7A26555F800044E521 /* LaunchScreen.storyboard */; };
 		D7432F84265575680044E521 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7432F83265575680044E521 /* WelcomeViewController.swift */; };
-		D7908DCF265742820099AA0D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7908DCE265742820099AA0D /* Constants.swift */; };
 		D7AD94012655A45400556DEE /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD94002655A45400556DEE /* MenuTableViewController.swift */; };
 		D7AD940526568E0800556DEE /* SermonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD940426568E0800556DEE /* SermonsTableViewController.swift */; };
 		D7AD940926568EA900556DEE /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD940826568EA900556DEE /* NotesViewController.swift */; };
@@ -22,6 +21,9 @@
 		D7F436AE26593C0C002C7E72 /* client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7F436AD26593C0C002C7E72 /* client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist */; };
 		D7F436B0265B29A5002C7E72 /* PlaylistDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436AF265B29A5002C7E72 /* PlaylistDataModel.swift */; };
 		D7F436B2265B29B9002C7E72 /* SermonsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436B1265B29B9002C7E72 /* SermonsDataManager.swift */; };
+		D7F436B9265B61BD002C7E72 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436B8265B61BD002C7E72 /* Constants.swift */; };
+		D7F436BB265BDF83002C7E72 /* VideoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436BA265BDF83002C7E72 /* VideoDataModel.swift */; };
+		D7F436BD265BDF9F002C7E72 /* SermonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436BC265BDF9F002C7E72 /* SermonModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +38,6 @@
 		D7432F7B26555F800044E521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7432F7D26555F800044E521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7432F83265575680044E521 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		D7908DCE265742820099AA0D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D7AD94002655A45400556DEE /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		D7AD940426568E0800556DEE /* SermonsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonsTableViewController.swift; sourceTree = "<group>"; };
 		D7AD940826568EA900556DEE /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +45,9 @@
 		D7F436AD26593C0C002C7E72 /* client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist"; path = "JesusPeople/client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		D7F436AF265B29A5002C7E72 /* PlaylistDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDataModel.swift; sourceTree = "<group>"; };
 		D7F436B1265B29B9002C7E72 /* SermonsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonsDataManager.swift; sourceTree = "<group>"; };
+		D7F436B8265B61BD002C7E72 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D7F436BA265BDF83002C7E72 /* VideoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDataModel.swift; sourceTree = "<group>"; };
+		D7F436BC265BDF9F002C7E72 /* SermonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +108,11 @@
 		D7432F85265575900044E521 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D7908DCE265742820099AA0D /* Constants.swift */,
 				D7F436AF265B29A5002C7E72 /* PlaylistDataModel.swift */,
 				D7F436B1265B29B9002C7E72 /* SermonsDataManager.swift */,
+				D7F436B8265B61BD002C7E72 /* Constants.swift */,
+				D7F436BA265BDF83002C7E72 /* VideoDataModel.swift */,
+				D7F436BC265BDF9F002C7E72 /* SermonModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,7 +157,6 @@
 				D7432F6926555F7C0044E521 /* Frameworks */,
 				D7432F6A26555F7C0044E521 /* Resources */,
 				8BB8CB8BDB14AE3078BED8CB /* [CP] Embed Pods Frameworks */,
-				73E51313A34D63A41D307C15 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,23 +236,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		73E51313A34D63A41D307C15 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JesusPeople/Pods-JesusPeople-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JesusPeople/Pods-JesusPeople-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JesusPeople/Pods-JesusPeople-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8BB8CB8BDB14AE3078BED8CB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,16 +260,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7F436BB265BDF83002C7E72 /* VideoDataModel.swift in Sources */,
 				D7AD94012655A45400556DEE /* MenuTableViewController.swift in Sources */,
 				D7AD940B265690AF00556DEE /* BibleViewController.swift in Sources */,
 				D7432F84265575680044E521 /* WelcomeViewController.swift in Sources */,
 				D7F436B0265B29A5002C7E72 /* PlaylistDataModel.swift in Sources */,
 				D7AD940526568E0800556DEE /* SermonsTableViewController.swift in Sources */,
+				D7F436B9265B61BD002C7E72 /* Constants.swift in Sources */,
 				D7AD940926568EA900556DEE /* NotesViewController.swift in Sources */,
 				D7432F7026555F7C0044E521 /* AppDelegate.swift in Sources */,
+				D7F436BD265BDF9F002C7E72 /* SermonModel.swift in Sources */,
 				D7F436B2265B29B9002C7E72 /* SermonsDataManager.swift in Sources */,
 				D7432F7226555F7C0044E521 /* SceneDelegate.swift in Sources */,
-				D7908DCF265742820099AA0D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
