@@ -8,7 +8,6 @@
 import Foundation
 
 
-//let apiKey = Constants.apiKey
-//let url = URL(string: "https://www.googleapis.com/youtube/v3/search/key=\(apiKey)")
+
 
 
