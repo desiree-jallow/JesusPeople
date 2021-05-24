@@ -12,28 +12,35 @@ import GoogleAPIClientForREST
 class SermonsTableViewController: UITableViewController  {
     let videoIds = [String]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        SermonsDataManger.instance.performRequest(with: Constants.playListUrl, completionHandler: {
-            print(SermonsDataManger.instance.videoIds)
+        SermonsDataManger.instance.performRequest(with: Constants.playListEndpoint, completionHandler: { [self] in
+            let endpoint = createVideoEndpoint()
+            print(endpoint)
+            SermonsDataManger.instance.performRequest(with: endpoint, completionHandler: {
+                print(SermonsDataManger.instance.sermonVideosArray)
+            })
+//            print(SermonsDataManger.instance.videoIds)
+//            print(SermonsDataManger.instance.videoUrls)
+
         })
        
+       
+        
+       
+       
+        
            
-        
-        
-//        print(SermonsDataManger.instance.videoIds)
+    
 }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return SermonsDataManger.instance.sermonVideosArray.count
     }
 
     
@@ -43,6 +50,14 @@ class SermonsTableViewController: UITableViewController  {
         // Configure the cell...
 
         return cell
+    }
+    
+    func createVideoEndpoint() -> String {
+        let urlString = Constants.videoEndpoint
+        let separator = "&id="
+        let ids = SermonsDataManger.instance.videoIds.joined(separator: ",")
+        return urlString + separator + ids
+        
     }
     
     

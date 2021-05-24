@@ -11,6 +11,8 @@ struct SermonsDataManger {
     static var instance = SermonsDataManger()
     //retrieve the videoIDs with playlistURL
     var videoIds = [String]()
+    var videoUrls = [String]()
+    var sermonVideosArray = [SermonModel]()
     
     func performRequest(with urlString: String, completionHandler: @escaping () -> Void) {
         
@@ -25,15 +27,29 @@ struct SermonsDataManger {
                     return
                 }
                 //parse data
-                if let safeData = data {
-                    
-                    if let ids = self.getVideoIDs(safeData) {
+                if urlString == Constants.playListEndpoint {
+                    if let safeData = data {
                         
-                        SermonsDataManger.instance.videoIds = ids
-                        completionHandler()
-                        
-                        
+                        if let ids = self.getVideoIDs(safeData) {
+                            
+                            SermonsDataManger.instance.videoIds = ids
+                            for int in 0..<SermonsDataManger.instance.videoIds.count {
+                                SermonsDataManger.instance.videoUrls.append("youtube.com/watch?v=\(SermonsDataManger.instance.videoIds[int])")
+                            }
+                            completionHandler()
+                            
+                            
+                        }
                     }
+                }
+                 else {
+                    if let safeData = data {
+                        if let sermons = self.parseVideoData(safeData) {
+                            SermonsDataManger.instance.sermonVideosArray = sermons
+                            completionHandler()
+                        }
+                    }
+
                 }
                 
             }
@@ -45,24 +61,46 @@ struct SermonsDataManger {
     func getVideoIDs(_ playListData: Data) -> [String]? {
         let decoder = JSONDecoder()
         var videoIDArray:[String] = []
+        
+        //Parse JSON
+        
         do {
-            //Parse JSON
+            let playlistModel = try decoder.decode(PlaylistDataModel.self, from: playListData)
             
-            do {
-                let playlistModel = try decoder.decode(PlaylistDataModel.self, from: playListData)
+            for int in 0..<playlistModel.items.count {
+                videoIDArray.append(playlistModel.items[int].contentDetails.videoId)
                 
-                for int in 0..<playlistModel.items.count {
-                    videoIDArray.append(playlistModel.items[int].contentDetails.videoId)
-                   
-                }
-                
-                
-            } catch  {
-                print(error)
             }
             
+            
+        } catch  {
+            print(error)
         }
+        
+        
         return videoIDArray
+    }
+    
+    func parseVideoData(_ videoData: Data) -> [SermonModel]? {
+        let decoder = JSONDecoder()
+        var sermonsArray = [SermonModel]()
+        
+        do {
+            let videoModel = try decoder.decode(VideoDataModel.self, from: videoData)
+            
+            for int in 0..<videoModel.items.count {
+                let title = videoModel.items[int].snippet.title
+                let thumbnail = videoModel.items[int].snippet.thumbnails.standard.url
+                let url = Constants.youtubeUrl + (videoModel.items[int].id)
+                let model = SermonModel(title: title, thumbnail: thumbnail, url: url)
+                sermonsArray.append(model)
+            }
+        } catch  {
+            print(error)
+        }
+        print(sermonsArray)
+        return sermonsArray
+        
     }
 }
     

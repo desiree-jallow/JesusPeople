@@ -12,14 +12,19 @@ struct VideoDataModel:Codable {
 }
 
 struct VideoItem:Codable {
+    let id:String
     let snippet:VideoSnippet
 }
 struct VideoSnippet:Codable {
     let title:String
-    let thumbnails:[String:ThumbnailsValue]
+    let thumbnails:Thumbnails
     let liveBroadcastContent:String
 }
 
-struct ThumbnailsValue:Codable {
+struct Thumbnails:Codable {
+    let standard:Standard
+}
+
+struct Standard:Codable {
     let url:String
 }
