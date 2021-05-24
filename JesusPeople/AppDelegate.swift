@@ -7,6 +7,7 @@
 
 import UIKit
 import SideMenu
+import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,10 +17,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        
         
-      
+        // Initialize Google sign-in.
+               GIDSignIn.sharedInstance().clientID = "<YOUR_CLIENT_ID>"
         
         return true
     }
+    
+    func application(_ application: UIApplication,
+                         open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+            return GIDSignIn.sharedInstance().handle(url,
+                                                     sourceApplication: sourceApplication,
+                                                     annotation: annotation)
+        }
+    
+    func application(_ app: UIApplication, open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+        let sourceApplication = options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String
+        let annotation = options[UIApplication.OpenURLOptionsKey.annotation]
+            return GIDSignIn.sharedInstance().handle(url,
+                                                     sourceApplication: sourceApplication,
+                                                     annotation: annotation)
+        }
 
     // MARK: UISceneSession Lifecycle
 
