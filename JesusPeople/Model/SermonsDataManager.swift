@@ -90,9 +90,10 @@ struct SermonsDataManger {
             
             for int in 0..<videoModel.items.count {
                 let title = videoModel.items[int].snippet.title
-                let thumbnail = videoModel.items[int].snippet.thumbnails.standard.url
+                let thumbnail = videoModel.items[int].snippet.thumbnails.image.url
                 let url = Constants.youtubeUrl + (videoModel.items[int].id)
-                let model = SermonModel(title: title, thumbnail: thumbnail, url: url)
+                let date = videoModel.items[int].snippet.publishedAt
+                let model = SermonModel(title: title, thumbnail: thumbnail, url: url, date: date)
                 sermonsArray.append(model)
             }
         } catch  {
