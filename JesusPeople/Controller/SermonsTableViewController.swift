@@ -17,22 +17,17 @@ class SermonsTableViewController: UITableViewController  {
         super.viewDidLoad()
         SermonsDataManger.instance.performRequest(with: Constants.playListEndpoint, completionHandler: { [self] in
             let endpoint = createVideoEndpoint()
-            print(endpoint)
             SermonsDataManger.instance.performRequest(with: endpoint, completionHandler: {
-                print(SermonsDataManger.instance.sermonVideosArray)
+                DispatchQueue.main.async {
+                    tableView.reloadData()
+                }
+               
             })
 //            print(SermonsDataManger.instance.videoIds)
 //            print(SermonsDataManger.instance.videoUrls)
 
         })
        
-       
-        
-       
-       
-        
-           
-    
 }
 
     // MARK: - Table view data source
@@ -45,10 +40,11 @@ class SermonsTableViewController: UITableViewController  {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "sermonCell", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "sermonCell", for: indexPath) as! SermonTableViewCell
+        
         // Configure the cell...
-
+        cell.configureCell(for: indexPath.row)
+    
         return cell
     }
     
@@ -59,6 +55,8 @@ class SermonsTableViewController: UITableViewController  {
         return urlString + separator + ids
         
     }
+    
+    
     
     
     /*

@@ -24,6 +24,7 @@
 		D7F436B9265B61BD002C7E72 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436B8265B61BD002C7E72 /* Constants.swift */; };
 		D7F436BB265BDF83002C7E72 /* VideoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436BA265BDF83002C7E72 /* VideoDataModel.swift */; };
 		D7F436BD265BDF9F002C7E72 /* SermonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436BC265BDF9F002C7E72 /* SermonModel.swift */; };
+		D7F436BF265D86DC002C7E72 /* SermonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436BE265D86DC002C7E72 /* SermonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		D7F436B8265B61BD002C7E72 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D7F436BA265BDF83002C7E72 /* VideoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDataModel.swift; sourceTree = "<group>"; };
 		D7F436BC265BDF9F002C7E72 /* SermonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonModel.swift; sourceTree = "<group>"; };
+		D7F436BE265D86DC002C7E72 /* SermonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				D7432F7526555F7C0044E521 /* Main.storyboard */,
+				D7F436BE265D86DC002C7E72 /* SermonTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				D7432F84265575680044E521 /* WelcomeViewController.swift in Sources */,
 				D7F436B0265B29A5002C7E72 /* PlaylistDataModel.swift in Sources */,
 				D7AD940526568E0800556DEE /* SermonsTableViewController.swift in Sources */,
+				D7F436BF265D86DC002C7E72 /* SermonTableViewCell.swift in Sources */,
 				D7F436B9265B61BD002C7E72 /* Constants.swift in Sources */,
 				D7AD940926568EA900556DEE /* NotesViewController.swift in Sources */,
 				D7432F7026555F7C0044E521 /* AppDelegate.swift in Sources */,

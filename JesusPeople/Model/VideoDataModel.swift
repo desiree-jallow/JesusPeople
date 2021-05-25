@@ -17,14 +17,21 @@ struct VideoItem:Codable {
 }
 struct VideoSnippet:Codable {
     let title:String
+    let publishedAt:String
     let thumbnails:Thumbnails
     let liveBroadcastContent:String
 }
 
 struct Thumbnails:Codable {
-    let standard:Standard
+    let image:Default
+    
+    enum CodingKeys:String,CodingKey {
+        case image = "default"
+    }
 }
 
-struct Standard:Codable {
+struct Default:Codable {
     let url:String
 }
+
+

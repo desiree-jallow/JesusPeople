@@ -11,4 +11,5 @@ struct SermonModel {
     let title:String
     let thumbnail:String
     let url:String
+    let date:String
 }
