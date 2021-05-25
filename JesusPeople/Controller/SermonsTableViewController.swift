@@ -15,9 +15,13 @@ class SermonsTableViewController: UITableViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         SermonsDataManger.instance.performRequest(with: Constants.playListEndpoint, completionHandler: { [self] in
             let endpoint = createVideoEndpoint()
+          
             SermonsDataManger.instance.performRequest(with: endpoint, completionHandler: {
+                SermonsDataManger.instance.formatDate(from: SermonsDataManger.instance.sermonVideosArray[0].date)
+                
                 DispatchQueue.main.async {
                     tableView.reloadData()
                 }

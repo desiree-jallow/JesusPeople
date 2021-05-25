@@ -92,16 +92,28 @@ struct SermonsDataManger {
                 let title = videoModel.items[int].snippet.title
                 let thumbnail = videoModel.items[int].snippet.thumbnails.image.url
                 let url = Constants.youtubeUrl + (videoModel.items[int].id)
-                let date = videoModel.items[int].snippet.publishedAt
+//                let date = videoModel.items[int].snippet.publishedAt
+                let date = self.formatDate(from: videoModel.items[int].snippet.publishedAt)
                 let model = SermonModel(title: title, thumbnail: thumbnail, url: url, date: date)
+                print(model)
                 sermonsArray.append(model)
             }
         } catch  {
             print(error)
         }
-        print(sermonsArray)
+    
         return sermonsArray
         
+    }
+    
+    func formatDate(from string:String) -> String {
+        var string = string
+        string.removeLast(10)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: string) ?? Date()
+        dateFormatter.dateStyle = .long
+        return dateFormatter.string(from: date)
     }
 }
     
