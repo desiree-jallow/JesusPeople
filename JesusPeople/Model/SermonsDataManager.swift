@@ -26,24 +26,25 @@ struct SermonsDataManger {
                 if error != nil {
                     return
                 }
-                //parse data
+                //if endpoint id playlist endpoint parse playlist data
                 if urlString == Constants.playListEndpoint {
                     if let safeData = data {
                         
                         if let ids = self.getVideoIDs(safeData) {
                             
                             SermonsDataManger.instance.videoIds = ids
+                            //create urls for videos and adds them to videoURLs array
                             for int in 0..<SermonsDataManger.instance.videoIds.count {
                                 SermonsDataManger.instance.videoUrls.append("youtube.com/watch?v=\(SermonsDataManger.instance.videoIds[int])")
                             }
                             completionHandler()
-                            
                             
                         }
                     }
                 }
                  else {
                     if let safeData = data {
+                        //if endpoint is video endpoint parse video data
                         if let sermons = self.parseVideoData(safeData) {
                             SermonsDataManger.instance.sermonVideosArray = sermons
                             completionHandler()
@@ -57,7 +58,7 @@ struct SermonsDataManger {
         }
     }
     
-    //parse data and set up weather model
+    //parse data and set up an array that holds the video ids
     func getVideoIDs(_ playListData: Data) -> [String]? {
         let decoder = JSONDecoder()
         var videoIDArray:[String] = []
@@ -66,7 +67,7 @@ struct SermonsDataManger {
         
         do {
             let playlistModel = try decoder.decode(PlaylistDataModel.self, from: playListData)
-            
+            //create videoIDArray
             for int in 0..<playlistModel.items.count {
                 videoIDArray.append(playlistModel.items[int].contentDetails.videoId)
                 
@@ -87,15 +88,13 @@ struct SermonsDataManger {
         
         do {
             let videoModel = try decoder.decode(VideoDataModel.self, from: videoData)
-            
+            //create sermonModel from data and add to sermonsArray for display in tableview
             for int in 0..<videoModel.items.count {
                 let title = videoModel.items[int].snippet.title
                 let thumbnail = videoModel.items[int].snippet.thumbnails.image.url
                 let url = Constants.youtubeUrl + (videoModel.items[int].id)
-//                let date = videoModel.items[int].snippet.publishedAt
                 let date = self.formatDate(from: videoModel.items[int].snippet.publishedAt)
                 let model = SermonModel(title: title, thumbnail: thumbnail, url: url, date: date)
-                print(model)
                 sermonsArray.append(model)
             }
         } catch  {
@@ -117,13 +116,6 @@ struct SermonsDataManger {
     }
 }
     
-        
-  
-    //put all video ids in an array
-    
-   
-   
-    //retreive video info using videoIDs from playlistURL using videoURL
    
     
 

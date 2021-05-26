@@ -9,13 +9,24 @@ import UIKit
 
 class NotesViewController: UIViewController {
 
+    @IBOutlet weak var titleText: UITextView!
+    @IBOutlet weak var noteText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    
+    @IBAction func shareButtonPressed(_ sender: UIBarButtonItem) {
+        let notes = [NotesModel(title: titleText.text, note: noteText.text)]
+        
+        let activityController = UIActivityViewController(activityItems: notes, applicationActivities: nil)
+        present(activityController, animated: true)
+        
+    }
+    
     /*
     // MARK: - Navigation
 

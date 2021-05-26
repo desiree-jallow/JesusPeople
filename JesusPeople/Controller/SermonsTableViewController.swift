@@ -20,15 +20,13 @@ class SermonsTableViewController: UITableViewController  {
             let endpoint = createVideoEndpoint()
           
             SermonsDataManger.instance.performRequest(with: endpoint, completionHandler: {
-                SermonsDataManger.instance.formatDate(from: SermonsDataManger.instance.sermonVideosArray[0].date)
                 
                 DispatchQueue.main.async {
                     tableView.reloadData()
                 }
                
             })
-//            print(SermonsDataManger.instance.videoIds)
-//            print(SermonsDataManger.instance.videoUrls)
+
 
         })
        
