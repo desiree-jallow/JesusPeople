@@ -18,6 +18,7 @@
 		D7AD940526568E0800556DEE /* SermonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD940426568E0800556DEE /* SermonsTableViewController.swift */; };
 		D7AD940926568EA900556DEE /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD940826568EA900556DEE /* NotesViewController.swift */; };
 		D7AD940B265690AF00556DEE /* BibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD940A265690AF00556DEE /* BibleViewController.swift */; };
+		D7CF2C2E265ED38D0022336C /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CF2C2D265ED38D0022336C /* NotesModel.swift */; };
 		D7F436AE26593C0C002C7E72 /* client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7F436AD26593C0C002C7E72 /* client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist */; };
 		D7F436B0265B29A5002C7E72 /* PlaylistDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436AF265B29A5002C7E72 /* PlaylistDataModel.swift */; };
 		D7F436B2265B29B9002C7E72 /* SermonsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436B1265B29B9002C7E72 /* SermonsDataManager.swift */; };
@@ -43,6 +44,7 @@
 		D7AD940426568E0800556DEE /* SermonsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonsTableViewController.swift; sourceTree = "<group>"; };
 		D7AD940826568EA900556DEE /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		D7AD940A265690AF00556DEE /* BibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleViewController.swift; sourceTree = "<group>"; };
+		D7CF2C2D265ED38D0022336C /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
 		D7F436AD26593C0C002C7E72 /* client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist"; path = "JesusPeople/client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		D7F436AF265B29A5002C7E72 /* PlaylistDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDataModel.swift; sourceTree = "<group>"; };
 		D7F436B1265B29B9002C7E72 /* SermonsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonsDataManager.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				D7F436B8265B61BD002C7E72 /* Constants.swift */,
 				D7F436BA265BDF83002C7E72 /* VideoDataModel.swift */,
 				D7F436BC265BDF9F002C7E72 /* SermonModel.swift */,
+				D7CF2C2D265ED38D0022336C /* NotesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				D7F436B0265B29A5002C7E72 /* PlaylistDataModel.swift in Sources */,
 				D7AD940526568E0800556DEE /* SermonsTableViewController.swift in Sources */,
 				D7F436BF265D86DC002C7E72 /* SermonTableViewCell.swift in Sources */,
+				D7CF2C2E265ED38D0022336C /* NotesModel.swift in Sources */,
 				D7F436B9265B61BD002C7E72 /* Constants.swift in Sources */,
 				D7AD940926568EA900556DEE /* NotesViewController.swift in Sources */,
 				D7432F7026555F7C0044E521 /* AppDelegate.swift in Sources */,

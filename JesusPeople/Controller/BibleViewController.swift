@@ -13,11 +13,13 @@ class BibleViewController: UIViewController, WKNavigationDelegate {
     var spinner = UIActivityIndicatorView(style: .large)
     
     override func loadView() {
+        super.loadView()
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
-        
         showSpinner()
+        
+        
         
     }
     
