@@ -12,10 +12,14 @@ import GoogleAPIClientForREST
 class SermonsTableViewController: UITableViewController  {
     let videoIds = [String]()
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        spinner.startAnimating()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         SermonsDataManger.instance.performRequest(with: Constants.playListEndpoint, completionHandler: { [self] in
             let endpoint = createVideoEndpoint()
           
@@ -23,6 +27,7 @@ class SermonsTableViewController: UITableViewController  {
                 
                 DispatchQueue.main.async {
                     tableView.reloadData()
+                    spinner.stopAnimating()
                 }
                
             })
