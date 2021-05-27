@@ -1,24 +1,22 @@
 //
-//  GivingViewController.swift
+//  ContactViewController.swift
 //  JesusPeople
 //
-//  Created by Desiree on 5/26/21.
+//  Created by Desiree on 5/27/21.
 //
 
 import UIKit
-import StoreKit
 
-class GivingViewController: UIViewController {
+class ContactViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        //figure out a design
-       let vc = SKStoreProductViewController()
-        vc.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier:NSNumber(value:1052274581)], completionBlock: nil)
 
-        present(vc, animated: true, completion: nil)
+        //link to apple maps for address
         
+        //open phone
+        
+        //open email
         
     }
     

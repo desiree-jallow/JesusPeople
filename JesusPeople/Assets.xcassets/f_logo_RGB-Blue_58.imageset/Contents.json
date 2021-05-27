@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "1024px-Instagram_icon.png",
+      "filename" : "f_logo_RGB-Blue_58.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "1024px-Instagram_icon@2x.png",
+      "filename" : "f_logo_RGB-Blue_58@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "1024px-Instagram_icon@3x.png",
+      "filename" : "f_logo_RGB-Blue_58@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

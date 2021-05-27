@@ -35,11 +35,13 @@ class BibleViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let url = URL(string: Constants.bibleUrl) {
-            webView.load(URLRequest(url: url))
-            webView.allowsBackForwardNavigationGestures = true
+      
+            if let url = URL(string: Constants.bibleUrl) {
+                webView.load(URLRequest(url: url))
+                webView.allowsBackForwardNavigationGestures = true
+            
         }
+       
        
         // Do any additional setup after loading the view.
         
