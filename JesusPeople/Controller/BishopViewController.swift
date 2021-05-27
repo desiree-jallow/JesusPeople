@@ -21,11 +21,13 @@ class BishopViewController: UIViewController,WKNavigationDelegate {
         webView.navigationDelegate = self
         
         
-        if let url = URL(string: Constants.bishopUrl) {
-            webView.load(URLRequest(url: url))
-            webView.allowsBackForwardNavigationGestures = true
-        // Do any additional setup after loading the view.
+            if let url = URL(string: Constants.bishopUrl) {
+                webView.load(URLRequest(url: url))
+                webView.allowsBackForwardNavigationGestures = true
+            // Do any additional setup after loading the view.
+            
         }
+     
     }
   
     

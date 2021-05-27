@@ -14,6 +14,9 @@
 		D7432F7926555F800044E521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7432F7826555F800044E521 /* Assets.xcassets */; };
 		D7432F7C26555F800044E521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7432F7A26555F800044E521 /* LaunchScreen.storyboard */; };
 		D7432F84265575680044E521 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7432F83265575680044E521 /* WelcomeViewController.swift */; };
+		D77EFE6426602B36006B23FB /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77EFE6326602B36006B23FB /* VideoViewController.swift */; };
+		D77EFE66266045BF006B23FB /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77EFE65266045BF006B23FB /* SocialViewController.swift */; };
+		D77EFE6826604693006B23FB /* SocialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77EFE6726604693006B23FB /* SocialTableViewController.swift */; };
 		D7AD94012655A45400556DEE /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD94002655A45400556DEE /* MenuTableViewController.swift */; };
 		D7AD940526568E0800556DEE /* SermonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD940426568E0800556DEE /* SermonsTableViewController.swift */; };
 		D7AD940926568EA900556DEE /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD940826568EA900556DEE /* NotesViewController.swift */; };
@@ -22,6 +25,7 @@
 		D7CF2C30265EDB810022336C /* GivingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CF2C2F265EDB810022336C /* GivingViewController.swift */; };
 		D7E5199C2660117000DE470C /* BishopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5199B2660117000DE470C /* BishopViewController.swift */; };
 		D7E5199E2660119E00DE470C /* MinistriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5199D2660119E00DE470C /* MinistriesViewController.swift */; };
+		D7E519A126601E8800DE470C /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E519A026601E8800DE470C /* ContactViewController.swift */; };
 		D7F436AE26593C0C002C7E72 /* client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7F436AD26593C0C002C7E72 /* client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist */; };
 		D7F436B0265B29A5002C7E72 /* PlaylistDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436AF265B29A5002C7E72 /* PlaylistDataModel.swift */; };
 		D7F436B2265B29B9002C7E72 /* SermonsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436B1265B29B9002C7E72 /* SermonsDataManager.swift */; };
@@ -43,6 +47,9 @@
 		D7432F7B26555F800044E521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7432F7D26555F800044E521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7432F83265575680044E521 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		D77EFE6326602B36006B23FB /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		D77EFE65266045BF006B23FB /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		D77EFE6726604693006B23FB /* SocialTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialTableViewController.swift; sourceTree = "<group>"; };
 		D7AD94002655A45400556DEE /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		D7AD940426568E0800556DEE /* SermonsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonsTableViewController.swift; sourceTree = "<group>"; };
 		D7AD940826568EA900556DEE /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +58,7 @@
 		D7CF2C2F265EDB810022336C /* GivingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GivingViewController.swift; sourceTree = "<group>"; };
 		D7E5199B2660117000DE470C /* BishopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BishopViewController.swift; sourceTree = "<group>"; };
 		D7E5199D2660119E00DE470C /* MinistriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinistriesViewController.swift; sourceTree = "<group>"; };
+		D7E519A026601E8800DE470C /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		D7F436AD26593C0C002C7E72 /* client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist"; path = "JesusPeople/client_554336350591-6hshsabahjbbn58it4e4ahmb1lvt10nb.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		D7F436AF265B29A5002C7E72 /* PlaylistDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDataModel.swift; sourceTree = "<group>"; };
 		D7F436B1265B29B9002C7E72 /* SermonsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonsDataManager.swift; sourceTree = "<group>"; };
@@ -148,6 +156,10 @@
 				D7CF2C2F265EDB810022336C /* GivingViewController.swift */,
 				D7E5199B2660117000DE470C /* BishopViewController.swift */,
 				D7E5199D2660119E00DE470C /* MinistriesViewController.swift */,
+				D7E519A026601E8800DE470C /* ContactViewController.swift */,
+				D77EFE6326602B36006B23FB /* VideoViewController.swift */,
+				D77EFE65266045BF006B23FB /* SocialViewController.swift */,
+				D77EFE6726604693006B23FB /* SocialTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -287,7 +299,10 @@
 				D7AD94012655A45400556DEE /* MenuTableViewController.swift in Sources */,
 				D7AD940B265690AF00556DEE /* BibleViewController.swift in Sources */,
 				D7CF2C30265EDB810022336C /* GivingViewController.swift in Sources */,
+				D77EFE6826604693006B23FB /* SocialTableViewController.swift in Sources */,
 				D7432F84265575680044E521 /* WelcomeViewController.swift in Sources */,
+				D77EFE6426602B36006B23FB /* VideoViewController.swift in Sources */,
+				D7E519A126601E8800DE470C /* ContactViewController.swift in Sources */,
 				D7F436B0265B29A5002C7E72 /* PlaylistDataModel.swift in Sources */,
 				D7AD940526568E0800556DEE /* SermonsTableViewController.swift in Sources */,
 				D7F436BF265D86DC002C7E72 /* SermonTableViewCell.swift in Sources */,
@@ -296,6 +311,7 @@
 				D7F436B9265B61BD002C7E72 /* Constants.swift in Sources */,
 				D7E5199E2660119E00DE470C /* MinistriesViewController.swift in Sources */,
 				D7AD940926568EA900556DEE /* NotesViewController.swift in Sources */,
+				D77EFE66266045BF006B23FB /* SocialViewController.swift in Sources */,
 				D7432F7026555F7C0044E521 /* AppDelegate.swift in Sources */,
 				D7F436BD265BDF9F002C7E72 /* SermonModel.swift in Sources */,
 				D7F436B2265B29B9002C7E72 /* SermonsDataManager.swift in Sources */,

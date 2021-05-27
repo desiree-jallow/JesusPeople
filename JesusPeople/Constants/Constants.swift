@@ -28,4 +28,13 @@ struct Constants {
     static let bishopUrl = "http://www.jpcinternational.org/category/bishops-corner/"
     
     static let ministiesUrl = "http://www.jpcinternational.org/our-ministries/"
+    
+    static let sermonCell = "sermonCell"
+    
+    static let videoSegue = "videoSegue"
+    
+    static let instagramSegue = "instagramSegue"
+    
+    static let facebookSegue = "facebookSegue"
+    
 }
