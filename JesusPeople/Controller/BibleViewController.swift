@@ -8,30 +8,9 @@
 import UIKit
 import WebKit
 
-class BibleViewController: UIViewController, WKNavigationDelegate {
-    var webView: WKWebView!
-    var spinner = UIActivityIndicatorView(style: .large)
+class BibleViewController: WebViewController {
+   
     
-    override func viewWillAppear(_ animated: Bool) {
-        showSpinner()
-    }
-    
-    override func loadView() {
-        super.loadView()
-        webView = WKWebView()
-        webView.navigationDelegate = self
-        view = webView
-
-    }
-    
-    func showSpinner() {
-        spinner.translatesAutoresizingMaskIntoConstraints = false
-        spinner.startAnimating()
-        view.addSubview(spinner)
-
-        spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,12 +27,7 @@ class BibleViewController: UIViewController, WKNavigationDelegate {
         
     }
     
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        if webView.isLoading {
-            return
-        }
-        spinner.stopAnimating()
-    }
+  
     
    
     
