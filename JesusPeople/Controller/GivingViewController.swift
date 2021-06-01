@@ -14,6 +14,9 @@ class GivingViewController: UIViewController {
         super.viewDidLoad()
      
         //figure out a design
+        
+        //chech out this solution
+//        https://stackoverflow.com/questions/53324080/open-url-in-specific-tabbar
        let vc = SKStoreProductViewController()
         vc.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier:NSNumber(value:1052274581)], completionBlock: nil)
 

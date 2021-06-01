@@ -8,18 +8,11 @@
 import UIKit
 import WebKit
 
-class MinistriesViewController: UIViewController, WKNavigationDelegate{
-    @IBOutlet weak var webView: WKWebView!
-    @IBOutlet weak var spinner: UIActivityIndicatorView!
+class MinistriesViewController: WebViewController{
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        spinner.startAnimating()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        webView.navigationDelegate = self
      
        
             if let url = URL(string: Constants.ministiesUrl) {
@@ -29,16 +22,10 @@ class MinistriesViewController: UIViewController, WKNavigationDelegate{
             
         }
        
-        // Do any additional setup after loading the view.
+   
     }
     
-   
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        if webView.isLoading {
-            return
-        }
-        spinner.stopAnimating()
-    }
+
     
 
     /*
