@@ -37,4 +37,8 @@ struct Constants {
     
     static let facebookSegue = "facebookSegue"
     
+    static let restorationID = "giving"
+    
+    static let givingURL = "https://onrealm.org/JesusPeopleChap/-/give/now?isEngagement=True"
+    
 }

@@ -13,16 +13,13 @@ class GivingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        //figure out a design
-        
-        //chech out this solution
-//        https://stackoverflow.com/questions/53324080/open-url-in-specific-tabbar
-       let vc = SKStoreProductViewController()
-        vc.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier:NSNumber(value:1052274581)], completionBlock: nil)
-
-        present(vc, animated: true, completion: nil)
-        
-        
+        if let url = URL(string: Constants.givingURL), UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url)
+            }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 
