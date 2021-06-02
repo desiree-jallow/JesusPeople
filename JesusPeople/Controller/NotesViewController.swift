@@ -7,14 +7,25 @@
 
 import UIKit
 
-class NotesViewController: UIViewController {
+class NotesViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var titleText: UITextView!
     @IBOutlet weak var noteText: UITextView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        titleText.delegate = self
+        noteText.delegate = self
+        noteText.text = "new note..."
+        noteText.textColor = .lightGray
+        titleText.text = "Title"
+        titleText.textColor = .lightGray
+        
+        
+        
+    
         // Do any additional setup after loading the view.
     }
     
@@ -27,14 +38,31 @@ class NotesViewController: UIViewController {
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //remove the placeholder text and change the text color to black
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == .lightGray {
+            textView.text = nil
+            textView.textColor = .black
+        
+        }
+        
     }
-    */
-
+    
+    //replace placeholder text if textview is empty
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if titleText.text.isEmpty {
+            titleText.text = "Title"
+            titleText.textColor = .lightGray
+           
+        }
+        
+        if noteText.text.isEmpty {
+            noteText.text = "new note..."
+            noteText.textColor = .lightGray
+            
+        }
+        
+    }
+    
 }
+
