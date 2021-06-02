@@ -13,15 +13,11 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
     var spinner = UIActivityIndicatorView(style: .large)
     
-    override func viewWillAppear(_ animated: Bool) {
-        showSpinner()
-    }
-    
     override func loadView() {
         super.loadView()
         webView = WKWebView()
-        webView.navigationDelegate = self
         view = webView
+        showSpinner()
 
     }
     
@@ -36,25 +32,23 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+    
+        webView.navigationDelegate = self
             if let url = URL(string: Constants.bibleUrl) {
                 webView.load(URLRequest(url: url))
                 webView.allowsBackForwardNavigationGestures = true
             
         }
        
-       
-        // Do any additional setup after loading the view.
-        
-        
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         if webView.isLoading {
-            return
+            showSpinner()
+        } else {
+            spinner.stopAnimating()
         }
-        spinner.stopAnimating()
+        
     }
-    
 
 }

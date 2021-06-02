@@ -17,12 +17,9 @@ class SermonsTableViewController: UITableViewController  {
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
-    override func viewWillAppear(_ animated: Bool) {
-        spinner.startAnimating()
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        spinner.startAnimating()
         SermonsDataManger.instance.performRequest(with: Constants.playListEndpoint, completionHandler: { [self] in
             let endpoint = createVideoEndpoint()
           
@@ -35,7 +32,6 @@ class SermonsTableViewController: UITableViewController  {
                
             })
 
-
         })
        
 }
@@ -44,7 +40,6 @@ class SermonsTableViewController: UITableViewController  {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return SermonsDataManger.instance.sermonVideosArray.count
     }
 
