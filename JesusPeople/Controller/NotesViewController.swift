@@ -12,8 +12,6 @@ class NotesViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var titleText: UITextView!
     @IBOutlet weak var noteText: UITextView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         titleText.delegate = self
@@ -22,13 +20,7 @@ class NotesViewController: UIViewController, UITextViewDelegate {
         noteText.textColor = .lightGray
         titleText.text = "Title"
         titleText.textColor = .lightGray
-        
-        
-        
-    
-        // Do any additional setup after loading the view.
     }
-    
     
     @IBAction func shareButtonPressed(_ sender: UIBarButtonItem) {
         let notes = [NotesModel(title: titleText.text, note: noteText.text)]
