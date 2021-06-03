@@ -70,9 +70,10 @@ class SermonsTableViewController: UITableViewController  {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let indexPath = tableView.indexPathForSelectedRow
         if segue.identifier == Constants.videoSegue {
-            let videoVC = segue.destination as! VideoViewController
+            let videoVC = segue.destination as! VideoPlayerViewController
             if let index = indexPath?.row {
                 videoVC.index = index
+                videoVC.videoId = SermonsDataManger.instance.videoIds[index]
             }
             
                 
