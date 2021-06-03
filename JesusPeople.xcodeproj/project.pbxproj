@@ -34,6 +34,7 @@
 		D7F436BD265BDF9F002C7E72 /* SermonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436BC265BDF9F002C7E72 /* SermonModel.swift */; };
 		D7F436BF265D86DC002C7E72 /* SermonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F436BE265D86DC002C7E72 /* SermonTableViewCell.swift */; };
 		D7F688C7266819F200D2C764 /* TextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F688C6266819F200D2C764 /* TextViewExtension.swift */; };
+		D7F688CD26696D8100D2C764 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F688CC26696D8100D2C764 /* VideoPlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		D7F436BC265BDF9F002C7E72 /* SermonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonModel.swift; sourceTree = "<group>"; };
 		D7F436BE265D86DC002C7E72 /* SermonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonTableViewCell.swift; sourceTree = "<group>"; };
 		D7F688C6266819F200D2C764 /* TextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewExtension.swift; sourceTree = "<group>"; };
+		D7F688CC26696D8100D2C764 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				D7432F83265575680044E521 /* WelcomeViewController.swift */,
 				D7AD94002655A45400556DEE /* MenuTableViewController.swift */,
 				D7AD940426568E0800556DEE /* SermonsTableViewController.swift */,
+				D7F688CC26696D8100D2C764 /* VideoPlayerViewController.swift */,
 				D7AD940826568EA900556DEE /* NotesViewController.swift */,
 				D7AD940A265690AF00556DEE /* BibleViewController.swift */,
 				D7CF2C2F265EDB810022336C /* GivingViewController.swift */,
@@ -326,6 +329,7 @@
 				D7432F7026555F7C0044E521 /* AppDelegate.swift in Sources */,
 				D7F688C7266819F200D2C764 /* TextViewExtension.swift in Sources */,
 				D7F436BD265BDF9F002C7E72 /* SermonModel.swift in Sources */,
+				D7F688CD26696D8100D2C764 /* VideoPlayerViewController.swift in Sources */,
 				D7F436B2265B29B9002C7E72 /* SermonsDataManager.swift in Sources */,
 				D7432F7226555F7C0044E521 /* SceneDelegate.swift in Sources */,
 			);
