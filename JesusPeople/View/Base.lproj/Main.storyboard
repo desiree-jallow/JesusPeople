@@ -384,37 +384,32 @@
             </objects>
             <point key="canvasLocation" x="1800" y="-532"/>
         </scene>
-        <!--Video View Controller-->
+        <!--Video Player View Controller-->
         <scene sceneID="sx4-Pn-Aqt">
             <objects>
-                <viewController id="3eQ-ho-3kZ" customClass="VideoViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8N2-5m-h5P">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+
+                <viewController id="3eQ-ho-3kZ" customClass="VideoPlayerViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8N2-5m-h5P">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="843"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoQ-io-Hwl">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoQ-io-Hwl" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="88" width="428" height="300"/>
+                                <color key="backgroundColor" red="0.056203052250000003" green="0.035532772009999998" blue="0.018130046680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="IwQ-Ph-nOs"/>
+                                </constraints>
+
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vgq-pq-GFi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VoQ-io-Hwl" firstAttribute="leading" secondItem="8N2-5m-h5P" secondAttribute="leading" id="0GH-j8-yho"/>
-                            <constraint firstItem="VoQ-io-Hwl" firstAttribute="leading" secondItem="vgq-pq-GFi" secondAttribute="leading" id="4ak-EE-td5"/>
-                            <constraint firstItem="VoQ-io-Hwl" firstAttribute="bottom" secondItem="vgq-pq-GFi" secondAttribute="bottom" id="4p0-pw-EZ8"/>
-                            <constraint firstItem="VoQ-io-Hwl" firstAttribute="top" secondItem="8N2-5m-h5P" secondAttribute="top" id="7Z0-xI-XeK"/>
-                            <constraint firstItem="VoQ-io-Hwl" firstAttribute="top" secondItem="8N2-5m-h5P" secondAttribute="top" id="9n3-dI-xR9"/>
-                            <constraint firstAttribute="trailing" secondItem="VoQ-io-Hwl" secondAttribute="trailing" id="EDn-DF-nqO"/>
-                            <constraint firstItem="VoQ-io-Hwl" firstAttribute="trailing" secondItem="vgq-pq-GFi" secondAttribute="trailing" id="EeD-j5-Vfk"/>
-                            <constraint firstAttribute="trailing" secondItem="VoQ-io-Hwl" secondAttribute="trailing" id="LlJ-dk-kky"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="VoQ-io-Hwl" secondAttribute="bottom" constant="-81.333333333333314" id="Uks-gq-TEt">
-                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
-                            </constraint>
-                            <constraint firstAttribute="bottom" secondItem="VoQ-io-Hwl" secondAttribute="bottom" id="aTC-tY-NE6"/>
-                            <constraint firstItem="VoQ-io-Hwl" firstAttribute="top" secondItem="8N2-5m-h5P" secondAttribute="top" id="bWH-PL-rL9">
-                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
-                            </constraint>
-                            <constraint firstItem="VoQ-io-Hwl" firstAttribute="leading" secondItem="8N2-5m-h5P" secondAttribute="leading" id="jiJ-M8-CJs"/>
-                            <constraint firstItem="VoQ-io-Hwl" firstAttribute="bottom" secondItem="vgq-pq-GFi" secondAttribute="bottom" id="pRj-es-e5s"/>
+
+                            <constraint firstItem="VoQ-io-Hwl" firstAttribute="top" secondItem="vgq-pq-GFi" secondAttribute="top" id="Clw-8r-1c2"/>
+                            <constraint firstItem="VoQ-io-Hwl" firstAttribute="trailing" secondItem="vgq-pq-GFi" secondAttribute="trailing" id="sHD-OI-Ne2"/>
+                            <constraint firstItem="VoQ-io-Hwl" firstAttribute="leading" secondItem="vgq-pq-GFi" secondAttribute="leading" id="tA6-of-WSs"/>
+
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -461,7 +456,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7O3-qg-1a7"/>
                     <connections>
-                        <outlet property="webPlayerView" destination="VoQ-io-Hwl" id="LqP-Jj-5Pv"/>
+                        <outlet property="playerView" destination="VoQ-io-Hwl" id="MfR-HM-WhS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8B8-dH-SPP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
