@@ -13,22 +13,29 @@ class VideoViewController: UIViewController {
     
     var index = 0
         
-        var webPlayer: WKWebView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
+    var webPlayer: WKWebView!
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         let webConfiguration = WKWebViewConfiguration()
                 webConfiguration.allowsInlineMediaPlayback = true
+        
 
         // Do any additional setup after loading the view.
         
         DispatchQueue.main.async { [self] in
-                    self.webPlayer = WKWebView(frame: self.webPlayerView.bounds, configuration: webConfiguration)
+            self.webPlayer = WKWebView(frame: self.webPlayerView.frame, configuration: webConfiguration)
                     self.webPlayerView.addSubview(self.webPlayer)
             guard let videoURL = URL(string: "https://www.youtube.com/embed/\(SermonsDataManger.instance.videoIds[index])?playsinline=1") else { return }
                     let request = URLRequest(url: videoURL)
                     self.webPlayer.load(request)
                 }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+     
     }
     
 
