@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "junior-reis-44XjKd_FfY0-unsplash.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "junior-reis-44XjKd_FfY0-unsplash@2x.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "junior-reis-44XjKd_FfY0-unsplash@3x.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
