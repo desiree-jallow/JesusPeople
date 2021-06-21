@@ -115,11 +115,11 @@
 		D7432F6E26555F7C0044E521 /* JesusPeople */ = {
 			isa = PBXGroup;
 			children = (
+				D7432F85265575900044E521 /* Model */,
+				D7432F86265575980044E521 /* View */,
+				D7432F87265575A50044E521 /* Controller */,
 				D7F688C5266819C500D2C764 /* Extensions */,
 				D7E5199F2660195A00DE470C /* Constants */,
-				D7432F87265575A50044E521 /* Controller */,
-				D7432F86265575980044E521 /* View */,
-				D7432F85265575900044E521 /* Model */,
 				D7432F6F26555F7C0044E521 /* AppDelegate.swift */,
 				D7432F7126555F7C0044E521 /* SceneDelegate.swift */,
 				D7432F7826555F800044E521 /* Assets.xcassets */,
