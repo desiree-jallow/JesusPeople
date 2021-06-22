@@ -682,7 +682,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1419 (2)" translatesAutoresizingMaskIntoConstraints="NO" id="CRT-vT-8U4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="257"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="247"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i5v-ef-NZO">
                                                     <rect key="frame" x="11.666666666666657" y="80" width="390.66666666666674" height="97.333333333333314"/>
@@ -706,7 +706,7 @@
                                                 <constraint firstItem="i5v-ef-NZO" firstAttribute="centerX" secondItem="cDL-uR-u9c" secondAttribute="centerX" id="6FF-fJ-5PC"/>
                                                 <constraint firstItem="CRT-vT-8U4" firstAttribute="top" secondItem="cDL-uR-u9c" secondAttribute="top" id="Jyz-oZ-6yM"/>
                                                 <constraint firstAttribute="trailing" secondItem="CRT-vT-8U4" secondAttribute="trailing" id="Pdg-v6-eoa"/>
-                                                <constraint firstAttribute="bottom" secondItem="CRT-vT-8U4" secondAttribute="bottom" id="UxK-vt-wzL"/>
+                                                <constraint firstAttribute="bottom" secondItem="CRT-vT-8U4" secondAttribute="bottom" constant="10" id="UxK-vt-wzL"/>
                                                 <constraint firstItem="i5v-ef-NZO" firstAttribute="centerY" secondItem="cDL-uR-u9c" secondAttribute="centerY" id="hUE-HS-GaP"/>
                                                 <constraint firstItem="CRT-vT-8U4" firstAttribute="leading" secondItem="cDL-uR-u9c" secondAttribute="leading" id="pCC-7Z-WiI"/>
                                             </constraints>
@@ -719,8 +719,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="junior-reis-44XjKd_FfY0-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="Fga-wj-EA4">
-                                                    <rect key="frame" x="0.0" y="10" width="414" height="140"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="junior-reis-44XjKd_FfY0-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="Fga-wj-EA4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YM-mf-cwf">
                                                     <rect key="frame" x="128.66666666666666" y="54.666666666666657" width="156.99999999999997" height="41"/>
@@ -731,7 +731,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="2YM-mf-cwf" firstAttribute="centerY" secondItem="XsZ-01-CW1" secondAttribute="centerY" id="5PN-hy-evx"/>
-                                                <constraint firstItem="Fga-wj-EA4" firstAttribute="top" secondItem="XsZ-01-CW1" secondAttribute="top" constant="10" id="9N6-dc-4kR"/>
+                                                <constraint firstItem="Fga-wj-EA4" firstAttribute="top" secondItem="XsZ-01-CW1" secondAttribute="top" id="9N6-dc-4kR"/>
                                                 <constraint firstAttribute="trailing" secondItem="Fga-wj-EA4" secondAttribute="trailing" id="HTE-es-yqZ"/>
                                                 <constraint firstItem="2YM-mf-cwf" firstAttribute="centerX" secondItem="XsZ-01-CW1" secondAttribute="centerX" id="al9-P1-82d"/>
                                                 <constraint firstAttribute="bottom" secondItem="Fga-wj-EA4" secondAttribute="bottom" id="xhR-Mk-gLD"/>
