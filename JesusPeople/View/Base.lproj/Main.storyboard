@@ -681,7 +681,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="257"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1419 (2)" translatesAutoresizingMaskIntoConstraints="NO" id="CRT-vT-8U4">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1423" translatesAutoresizingMaskIntoConstraints="NO" id="CRT-vT-8U4">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="247"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i5v-ef-NZO">
@@ -738,6 +738,9 @@
                                                 <constraint firstItem="Fga-wj-EA4" firstAttribute="leading" secondItem="XsZ-01-CW1" secondAttribute="leading" id="ztK-tr-IQa"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="V7I-NS-iak" kind="show" id="s8R-i4-Udu"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="140" id="acI-eF-rw5">
                                         <rect key="frame" x="0.0" y="431.33333396911621" width="414" height="140"/>
@@ -765,6 +768,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="n4Q-Me-ywB" secondAttribute="trailing" id="phm-25-ijZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="0zT-Nb-AWs" kind="show" id="tHK-hh-zjb"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="140" id="hWL-JQ-e6u">
                                         <rect key="frame" x="0.0" y="571.33333396911621" width="414" height="140"/>
@@ -773,7 +779,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="samuel-mcgarrigle-GVRRtaLj3LU-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="JxK-81-zH6">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="samantha-sophia-NaWKMlp3tVs-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="JxK-81-zH6">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Ministries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bw-yh-Ipy">
@@ -792,6 +798,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="JxK-81-zH6" secondAttribute="trailing" id="xyh-Mb-I0o"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="hjg-IB-WSg" kind="show" id="msR-Kp-E5x"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="140" id="7If-ZQ-yPZ">
                                         <rect key="frame" x="0.0" y="711.33333396911621" width="414" height="140"/>
@@ -819,6 +828,9 @@
                                                 <constraint firstItem="S70-4l-eMJ" firstAttribute="top" secondItem="qZn-Gc-02A" secondAttribute="top" id="ngB-OZ-doz"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="4Ai-dn-GiV" kind="show" id="kSx-1r-UrI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -829,6 +841,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="4Uu-KH-6Jz"/>
+                    <connections>
+                        <outlet property="bishopsCornerLabel" destination="cAi-Q7-zaf" id="aNX-38-a2w"/>
+                        <outlet property="churchNameLabel" destination="Ohz-Pj-kWo" id="RtM-fP-eXE"/>
+                        <outlet property="contactUsLabel" destination="2YM-mf-cwf" id="Uel-Yf-zMf"/>
+                        <outlet property="givingLabel" destination="oOL-6A-3dB" id="D0P-AO-xlD"/>
+                        <outlet property="ourMinistriesLabel" destination="7bw-yh-Ipy" id="2d2-Ji-bcM"/>
+                        <outlet property="welcomeLabel" destination="jHs-h6-KEY" id="guS-Ko-8CG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7h-IW-I6S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -925,7 +945,7 @@
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="IMG_1419 (2)" width="219" height="219"/>
+        <image name="IMG_1423" width="300" height="375"/>
         <image name="Instagram_Glyph_Gradient_RGB" width="333.33334350585938" height="333.33334350585938"/>
         <image name="arrow.triangle.turn.up.right.circle" catalog="system" width="128" height="121"/>
         <image name="clock" catalog="system" width="128" height="121"/>
@@ -942,7 +962,7 @@
         <image name="network" catalog="system" width="128" height="121"/>
         <image name="phone.circle" catalog="system" width="128" height="121"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
-        <image name="samuel-mcgarrigle-GVRRtaLj3LU-unsplash" width="1424" height="949.33331298828125"/>
+        <image name="samantha-sophia-NaWKMlp3tVs-unsplash" width="1728" height="1152"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="wp2936312" width="640" height="360"/>
         <systemColor name="labelColor">
