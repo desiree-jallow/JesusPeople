@@ -8,17 +8,37 @@
 import UIKit
 
 class WelcomTableViewController: UITableViewController {
-
+    
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    @IBOutlet weak var churchNameLabel: UILabel!
+    
+    @IBOutlet weak var contactUsLabel: UILabel!
+    
+    @IBOutlet weak var ourMinistriesLabel: UILabel!
+    
+    @IBOutlet weak var bishopsCornerLabel: UILabel!
+    
+    @IBOutlet weak var givingLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        addShadowToLabel(to: welcomeLabel)
+        addShadowToLabel(to: churchNameLabel)
+        addShadowToLabel(to: contactUsLabel)
+        addShadowToLabel(to: ourMinistriesLabel)
+        addShadowToLabel(to: bishopsCornerLabel)
+        addShadowToLabel(to: givingLabel)
+        
+      
     }
-
+    func addShadowToLabel(to label: UILabel) {
+        label.layer.masksToBounds = false
+              label.layer.shadowOffset = CGSize(width: 1, height: 1)
+        label.layer.rasterizationScale = UIScreen.main.scale
+        label.layer.shadowRadius = 6.0
+        label.layer.shadowOpacity = 1.0
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
