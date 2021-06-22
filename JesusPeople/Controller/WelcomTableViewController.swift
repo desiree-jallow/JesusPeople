@@ -23,6 +23,7 @@ class WelcomTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBarController?.tabBar.unselectedItemTintColor = .white
         addShadowToLabel(to: welcomeLabel)
         addShadowToLabel(to: churchNameLabel)
         addShadowToLabel(to: contactUsLabel)
