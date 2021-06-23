@@ -45,4 +45,6 @@ struct Constants {
     static let churchLong = -95.55533326012839
     
     static let churchName = "Jesus People Chapel International"
+    
+    static let churchPhone = "8326653453"
 }

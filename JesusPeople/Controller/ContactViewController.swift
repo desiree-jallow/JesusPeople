@@ -12,6 +12,7 @@ import CoreLocation
 class ContactViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    
     let churchLocation = CLLocationCoordinate2D(latitude: Constants.churchLat, longitude: Constants.churchLong)
     let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
     let annotation = MKPointAnnotation()
@@ -37,6 +38,25 @@ class ContactViewController: UIViewController {
         
     }
     
-
-
+    @IBAction func callButtonPressed(_ sender: UIButton) {
+        if let url = URL(string: "tel://\(Constants.churchPhone)"), UIApplication.shared.canOpenURL(url) {
+             
+                UIApplication.shared.open(url)
+            }
+    }
+    
+    @IBAction func directionsButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func emailButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func websiteButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func instagramButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func facebookButtonPressed(_ sender: UIButton) {
+    }
 }
