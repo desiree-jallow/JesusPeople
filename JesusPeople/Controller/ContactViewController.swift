@@ -12,7 +12,7 @@ import CoreLocation
 class ContactViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
-    let churchLocation = CLLocationCoordinate2D(latitude: 29.64248322842516, longitude: -95.55533326012839)
+    let churchLocation = CLLocationCoordinate2D(latitude: Constants.churchLat, longitude: Constants.churchLong)
     let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
     let annotation = MKPointAnnotation()
     
@@ -30,7 +30,7 @@ class ContactViewController: UIViewController {
         mapView.setRegion(region, animated: true)
         
         annotation.coordinate = churchLocation
-        annotation.title = "Jesus People Chapel International"
+        annotation.title = Constants.churchName
         mapView.addAnnotation(annotation)
         mapView.setCenter(churchLocation, animated: true)
         
