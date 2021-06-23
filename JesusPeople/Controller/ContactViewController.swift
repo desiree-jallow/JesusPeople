@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ContactViewController: UITableViewController {
+class ContactViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     let churchLocation = CLLocationCoordinate2D(latitude: 29.64248322842516, longitude: -95.55533326012839)
