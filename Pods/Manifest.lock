@@ -4,28 +4,34 @@ PODS:
   - GoogleAPIClientForREST/YouTube (1.2.1):
     - GoogleAPIClientForREST/Core
     - GTMSessionFetcher (>= 1.1.7)
-  - GTMSessionFetcher (1.5.0):
-    - GTMSessionFetcher/Full (= 1.5.0)
-  - GTMSessionFetcher/Core (1.5.0)
-  - GTMSessionFetcher/Full (1.5.0):
-    - GTMSessionFetcher/Core (= 1.5.0)
+  - GTMSessionFetcher (1.6.1):
+    - GTMSessionFetcher/Full (= 1.6.1)
+  - GTMSessionFetcher/Core (1.6.1)
+  - GTMSessionFetcher/Full (1.6.1):
+    - GTMSessionFetcher/Core (= 1.6.1)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
   - youtube-ios-player-helper (1.0.3)
 
 DEPENDENCIES:
   - GoogleAPIClientForREST/YouTube (~> 1.2.1)
+  - SQLite.swift (~> 0.12.0)
   - youtube-ios-player-helper
 
 SPEC REPOS:
   trunk:
     - GoogleAPIClientForREST
     - GTMSessionFetcher
+    - SQLite.swift
     - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   GoogleAPIClientForREST: a8b95a252014ce2e618df6b75dc72eca2c00b4af
-  GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   youtube-ios-player-helper: 0185c57db23c80d63d6ca11251d110abb8a4ca61
 
-PODFILE CHECKSUM: 88ef452913dca49b1b046b2b5e0bc9af57db9d0b
+PODFILE CHECKSUM: 48fd9ab90c48032ad68fb7df2eada8c7e3542af3
 
 COCOAPODS: 1.10.1
