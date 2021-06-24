@@ -17,7 +17,7 @@ class GivingViewController: UIViewController {
                         UIApplication.shared.open(url)
             }
     }
-    
+    //find a way to go back to welcome view controller when user presses back
     override func viewDidAppear(_ animated: Bool) {
         self.dismiss(animated: true, completion: nil)
     }

@@ -203,7 +203,7 @@
             </objects>
             <point key="canvasLocation" x="2677" y="3437"/>
         </scene>
-        <!--Contact View Controller-->
+        <!--Contact Us-->
         <scene sceneID="mUe-aQ-cHC">
             <objects>
                 <viewController id="cCA-f6-mIN" customClass="ContactViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
@@ -227,6 +227,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="Ffx-d0-NHs"/>
                                             <constraint firstAttribute="height" constant="150" id="O0b-vh-P6F"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-60"/>
@@ -307,7 +308,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="instagramButtonPressed:" destination="cCA-f6-mIN" eventType="touchUpInside" id="K7V-Az-Pgp"/>
+                                            <segue destination="rvZ-6L-kuN" kind="show" identifier="instagramSegue" id="0h5-1I-g5v"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1c-Ek-cse">
@@ -323,7 +324,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="facebookButtonPressed:" destination="cCA-f6-mIN" eventType="touchUpInside" id="FPl-s1-V2Z"/>
+                                            <segue destination="rvZ-6L-kuN" kind="show" identifier="facebookSegue" id="aJq-ur-ofk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -374,7 +375,9 @@
                             <constraint firstItem="PEy-3Y-1as" firstAttribute="leading" secondItem="E3R-Bg-J1L" secondAttribute="leading" id="rIS-Mt-l32"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="R0q-Nw-y3w"/>
+                    <navigationItem key="navigationItem" title="Contact Us" largeTitleDisplayMode="always" id="R0q-Nw-y3w">
+                        <barButtonItem key="backBarButtonItem" title="Contact Us" id="jeR-Ju-xDR"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="7BN-HL-LB2" id="Dd3-AR-x5e"/>
                     </connections>
@@ -386,14 +389,16 @@
         <!--Bishop View Controller-->
         <scene sceneID="cgc-yf-xKN">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="0zT-Nb-AWs" customClass="BishopViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0zT-Nb-AWs" customClass="BishopViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lht-wv-SSo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="dbR-GE-2Kx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0P7-UO-6lH"/>
+                    <navigationItem key="navigationItem" id="0P7-UO-6lH">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="gTB-QW-mGT"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42L-Kb-P7L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -404,11 +409,11 @@
             <objects>
                 <viewController id="rvZ-6L-kuN" customClass="SocialViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V05-Xi-okF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQe-YN-XYf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -429,7 +434,9 @@
                             <constraint firstItem="Zzq-Sh-nFz" firstAttribute="trailing" secondItem="vQe-YN-XYf" secondAttribute="trailing" id="nVJ-Pn-zxt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="o0u-fy-ORY"/>
+                    <navigationItem key="navigationItem" id="o0u-fy-ORY">
+                        <barButtonItem key="backBarButtonItem" title="Contact Us" id="cqx-gP-U8C"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="spinner" destination="nqh-UL-WdY" id="UQD-1b-YJg"/>
                         <outlet property="webView" destination="vQe-YN-XYf" id="19E-r8-a3k"/>
@@ -442,14 +449,16 @@
         <!--Ministries View Controller-->
         <scene sceneID="0qi-xS-omy">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="hjg-IB-WSg" customClass="MinistriesViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hjg-IB-WSg" customClass="MinistriesViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pqG-en-KUE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="BzO-Wb-UgS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="QFE-ws-SNs"/>
+                    <navigationItem key="navigationItem" id="QFE-ws-SNs">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="ZrD-G4-2lv"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rrj-L8-VX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -458,14 +467,16 @@
         <!--Giving View Controller-->
         <scene sceneID="OLi-BI-bqi">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="4Ai-dn-GiV" customClass="GivingViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4Ai-dn-GiV" customClass="GivingViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DQ2-S8-U4h">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="JnF-cE-2an"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wGm-sK-ylv"/>
+                    <navigationItem key="navigationItem" id="wGm-sK-ylv">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="A4q-Y4-Cnq"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4m-Ls-dJk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -601,7 +612,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="0zT-Nb-AWs" kind="show" id="tHK-hh-zjb"/>
+                                            <segue destination="0zT-Nb-AWs" kind="show" id="f2T-VI-0fj"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="140" id="hWL-JQ-e6u">
@@ -673,6 +684,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="4Uu-KH-6Jz">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="UUM-Ru-BYC"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="ubU-cu-sve"/>
                     </navigationItem>
                     <connections>
@@ -774,6 +786,9 @@
             <point key="canvasLocation" x="2643" y="1949"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aJq-ur-ofk"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="IMG_1423" width="300" height="375"/>

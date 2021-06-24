@@ -19,13 +19,6 @@ class ContactViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //link to apple maps for address
-        
-        //open phone
-        
-        //open email
-        //coordinates 29.64248322842516, -95.55533326012839
         
         let region = MKCoordinateRegion(center: churchLocation, span: span)
         mapView.setRegion(region, animated: true)
@@ -70,6 +63,7 @@ class ContactViewController: UIViewController {
     
     
     @IBAction func emailButtonPressed(_ sender: UIButton) {
+        
     }
     
     @IBAction func websiteButtonPressed(_ sender: UIButton) {
@@ -80,9 +74,20 @@ class ContactViewController: UIViewController {
     }
     
     @IBAction func instagramButtonPressed(_ sender: UIButton) {
-        
+       
     }
     
     @IBAction func facebookButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let socialVC = segue.destination as! SocialViewController
+        if segue.identifier == Constants.facebookSegue {
+            
+            socialVC.url = "https://www.facebook.com/JesusPeopleChapel"
+        } else if segue.identifier == Constants.instagramSegue {
+            socialVC.url = "https://www.instagram.com/jesus_people_chapel/"
+        }
     }
 }

@@ -37,7 +37,6 @@ class WebViewController: UIViewController, WKNavigationDelegate {
             if let url = URL(string: Constants.bibleUrl) {
                 webView.load(URLRequest(url: url))
                 webView.allowsBackForwardNavigationGestures = true
-            
         }
        
     }
