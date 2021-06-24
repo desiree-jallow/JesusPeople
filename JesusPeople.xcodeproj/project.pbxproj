@@ -20,7 +20,6 @@
 		D7AD940926568EA900556DEE /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD940826568EA900556DEE /* NotesViewController.swift */; };
 		D7AD940B265690AF00556DEE /* BibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD940A265690AF00556DEE /* BibleViewController.swift */; };
 		D7CF2C2E265ED38D0022336C /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CF2C2D265ED38D0022336C /* NotesModel.swift */; };
-		D7CF2C30265EDB810022336C /* GivingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CF2C2F265EDB810022336C /* GivingViewController.swift */; };
 		D7E5199C2660117000DE470C /* BishopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5199B2660117000DE470C /* BishopViewController.swift */; };
 		D7E5199E2660119E00DE470C /* MinistriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5199D2660119E00DE470C /* MinistriesViewController.swift */; };
 		D7E519A126601E8800DE470C /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E519A026601E8800DE470C /* ContactViewController.swift */; };
@@ -53,7 +52,6 @@
 		D7AD940826568EA900556DEE /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		D7AD940A265690AF00556DEE /* BibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleViewController.swift; sourceTree = "<group>"; };
 		D7CF2C2D265ED38D0022336C /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
-		D7CF2C2F265EDB810022336C /* GivingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GivingViewController.swift; sourceTree = "<group>"; };
 		D7E5199B2660117000DE470C /* BishopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BishopViewController.swift; sourceTree = "<group>"; };
 		D7E5199D2660119E00DE470C /* MinistriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinistriesViewController.swift; sourceTree = "<group>"; };
 		D7E519A026601E8800DE470C /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 				D7F688CC26696D8100D2C764 /* VideoPlayerViewController.swift */,
 				D7AD940826568EA900556DEE /* NotesViewController.swift */,
 				D7AD940A265690AF00556DEE /* BibleViewController.swift */,
-				D7CF2C2F265EDB810022336C /* GivingViewController.swift */,
 				D7E5199B2660117000DE470C /* BishopViewController.swift */,
 				D7E5199D2660119E00DE470C /* MinistriesViewController.swift */,
 				D7E519A026601E8800DE470C /* ContactViewController.swift */,
@@ -306,7 +303,6 @@
 				D7F436BB265BDF83002C7E72 /* VideoDataModel.swift in Sources */,
 				D77422E82666A27D00254F68 /* WebViewController.swift in Sources */,
 				D7AD940B265690AF00556DEE /* BibleViewController.swift in Sources */,
-				D7CF2C30265EDB810022336C /* GivingViewController.swift in Sources */,
 				D7E519A126601E8800DE470C /* ContactViewController.swift in Sources */,
 				D7F436B0265B29A5002C7E72 /* PlaylistDataModel.swift in Sources */,
 				D7AD940526568E0800556DEE /* SermonsTableViewController.swift in Sources */,
