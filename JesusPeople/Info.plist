@@ -31,6 +31,8 @@
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>comgooglemaps-x-callback</string>
+		<string>comgooglemaps</string>
 		<string>realmConnect</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>

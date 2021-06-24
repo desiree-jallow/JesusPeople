@@ -46,15 +46,41 @@ class ContactViewController: UIViewController {
     }
     
     @IBAction func directionsButtonPressed(_ sender: UIButton) {
-    }
+        //if phone has an google maps app
+        if UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!) {
+
+
+            if let url = URL(string: "comgooglemaps://?saddr=&daddr=Jesus+People+Chapel+Int'l&directionsmode=driving") {
+                
+                        UIApplication.shared.open(url, options: [:])
+                   }
+            
+        }
+              else {
+                // open with apple maps
+                let coordinate = CLLocationCoordinate2DMake(Constants.churchLat,Constants.churchLong)
+                let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
+                mapItem.name = Constants.churchName
+                mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+                   
+                        }
+
+                }
+       
+    
     
     @IBAction func emailButtonPressed(_ sender: UIButton) {
     }
     
     @IBAction func websiteButtonPressed(_ sender: UIButton) {
+        if let url = URL(string: "http://www.jpcinternational.org/"), UIApplication.shared.canOpenURL(url) {
+             
+                UIApplication.shared.open(url)
+            }
     }
     
     @IBAction func instagramButtonPressed(_ sender: UIButton) {
+        
     }
     
     @IBAction func facebookButtonPressed(_ sender: UIButton) {
