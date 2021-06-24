@@ -220,21 +220,18 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="uBr-ma-SiH">
                                 <rect key="frame" x="20" y="308" width="374" height="150"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5U-FO-ukb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5U-FO-ukb">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="150"/>
                                         <color key="backgroundColor" red="0.10433674273812164" green="0.24894832679967502" blue="0.41255708522222512" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="Ffx-d0-NHs"/>
                                             <constraint firstAttribute="height" constant="150" id="O0b-vh-P6F"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-60"/>
                                         <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="9"/>
-                                        <state key="normal" title="Call">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default" weight="regular"/>
-                                        </state>
+                                        <state key="normal" title="Call"/>
                                         <connections>
                                             <action selector="callButtonPressed:" destination="cCA-f6-mIN" eventType="touchUpInside" id="i0m-2i-gjo"/>
                                         </connections>

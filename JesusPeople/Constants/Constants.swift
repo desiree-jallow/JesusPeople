@@ -19,17 +19,22 @@ struct Constants {
     
     static let youtubeUrl = "youtube.com/watch?v="
     
-//    static let realmConnectSchemeUrl = "com.googleusercontent.apps.684305646980-76s6atjl01mg18olur1risvacds79lh2"
-//
-//    static let realmAppStoreUrl = "https://apps.apple.com/us/app/realm-connect-for-our-church/id1052274581"
-    
     static let bibleUrl = "https://www.bible.com/bible/111/GEN.1.NIV"
     
     static let bishopUrl = "http://www.jpcinternational.org/category/bishops-corner/"
     
     static let ministiesUrl = "http://www.jpcinternational.org/our-ministries/"
     
+    static let givingURL = "https://onrealm.org/JesusPeopleChap/-/give/now?isEngagement=True"
+    
+    static let googleMapUrl = "comgooglemaps://?q=cupertino"
+    
+    static let mapsUrl = "http://maps.apple.com/?q=cupertino"
+    
+    
+    
     static let sermonCell = "sermonCell"
+    
     
     static let videoSegue = "videoSegue"
     
@@ -37,9 +42,10 @@ struct Constants {
     
     static let facebookSegue = "facebookSegue"
     
+    
     static let restorationID = "giving"
     
-    static let givingURL = "https://onrealm.org/JesusPeopleChap/-/give/now?isEngagement=True"
+    
     static let churchLat = 29.64248322842516
     
     static let churchLong = -95.55533326012839
