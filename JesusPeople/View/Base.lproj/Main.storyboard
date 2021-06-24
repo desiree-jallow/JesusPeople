@@ -9,6 +9,67 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Notes Table View Controller-->
+        <scene sceneID="FEw-Pu-qF5">
+            <objects>
+                <tableViewController id="Rle-Uq-yyM" customClass="NotesTableViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RpI-jA-9VD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start taking notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xgV-6p-qka">
+                            <rect key="frame" x="0.0" y="92.333336223255515" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCell" textLabel="ypE-w7-GUU" detailTextLabel="l4w-Om-MMY" style="IBUITableViewCellStyleValue1" id="pYH-Ay-yb2">
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pYH-Ay-yb2" id="EhK-js-kgd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ypE-w7-GUU">
+                                            <rect key="frame" x="20" y="15" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l4w-Om-MMY">
+                                            <rect key="frame" x="361.33333333333331" y="15" width="32.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rle-Uq-yyM" id="FDH-bS-J6j"/>
+                            <outlet property="delegate" destination="Rle-Uq-yyM" id="OBo-51-6GK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="m1c-Gl-LEI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nkK-rU-OOp">
+                            <connections>
+                                <segue destination="zSA-q6-2u8" kind="show" id="4E6-qQ-ZeU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="startLabel" destination="xgV-6p-qka" id="ncS-MK-Ty3"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YEh-2G-gQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1074" y="2701"/>
+        </scene>
         <!--Sermons Table View Controller-->
         <scene sceneID="3su-D0-4RP">
             <objects>
@@ -154,10 +215,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zb7-9q-88G">
-                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="MAA-PQ-8xp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="MAA-PQ-8xp">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="shareButtonPressed:" destination="zSA-q6-2u8" id="khJ-M8-cHO"/>
+                                <action selector="saveButtonPressed:" destination="zSA-q6-2u8" id="uNj-Em-v8D"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -168,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3M-nD-73V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="2688"/>
+            <point key="canvasLocation" x="1074" y="3471"/>
         </scene>
         <!--Video Player View Controller-->
         <scene sceneID="sx4-Pn-Aqt">
@@ -734,12 +795,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="zSA-q6-2u8" kind="relationship" relationship="rootViewController" id="dSR-GB-YP2"/>
+                        <segue destination="Rle-Uq-yyM" kind="relationship" relationship="rootViewController" id="NoZ-Dd-3ne"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1J-yJ-Xir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="1975"/>
+            <point key="canvasLocation" x="1075" y="1975"/>
         </scene>
         <!--Semons-->
         <scene sceneID="3oK-GU-0tj">

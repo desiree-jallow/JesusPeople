@@ -8,6 +8,6 @@ target 'JesusPeople' do
   # Pods for JesusPeople
 	pod 'youtube-ios-player-helper'
 	pod 'GoogleAPIClientForREST/YouTube', '~> 1.2.1'
-	pod 'SQLite.swift', '~> 0.12.0'
+	pod 'RealmSwift', '=10.7.4'
 
 end

@@ -9,29 +9,33 @@ PODS:
   - GTMSessionFetcher/Core (1.6.1)
   - GTMSessionFetcher/Full (1.6.1):
     - GTMSessionFetcher/Core (= 1.6.1)
-  - SQLite.swift (0.12.2):
-    - SQLite.swift/standard (= 0.12.2)
-  - SQLite.swift/standard (0.12.2)
+  - Realm (10.7.4):
+    - Realm/Headers (= 10.7.4)
+  - Realm/Headers (10.7.4)
+  - RealmSwift (10.7.4):
+    - Realm (= 10.7.4)
   - youtube-ios-player-helper (1.0.3)
 
 DEPENDENCIES:
   - GoogleAPIClientForREST/YouTube (~> 1.2.1)
-  - SQLite.swift (~> 0.12.0)
+  - RealmSwift (= 10.7.4)
   - youtube-ios-player-helper
 
 SPEC REPOS:
   trunk:
     - GoogleAPIClientForREST
     - GTMSessionFetcher
-    - SQLite.swift
+    - Realm
+    - RealmSwift
     - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   GoogleAPIClientForREST: a8b95a252014ce2e618df6b75dc72eca2c00b4af
   GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
-  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  Realm: f08ce1a85649a41303ecfe1cbd914c62e9e6d710
+  RealmSwift: 60ec49d165f23d040ab48811d8dd177e09baf4d3
   youtube-ios-player-helper: 0185c57db23c80d63d6ca11251d110abb8a4ca61
 
-PODFILE CHECKSUM: 48fd9ab90c48032ad68fb7df2eada8c7e3542af3
+PODFILE CHECKSUM: a89d4d4690f23721d192df999834a667c43c13ed
 
 COCOAPODS: 1.10.1

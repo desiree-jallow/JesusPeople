@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NotesViewController: UIViewController, UITextViewDelegate {
-
+    let realm = try! Realm()
+    var notesNotificationToken: NotificationToken?
+    
+    
     @IBOutlet weak var titleText: UITextView!
     @IBOutlet weak var noteText: UITextView!
     
@@ -20,15 +24,27 @@ class NotesViewController: UIViewController, UITextViewDelegate {
         noteText.textColor = .lightGray
         titleText.text = "Title"
         titleText.textColor = .lightGray
+        
+        
     }
     
-    @IBAction func shareButtonPressed(_ sender: UIBarButtonItem) {
-        let notes = [NotesModel(title: titleText.text, note: noteText.text)]
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         
-        let activityController = UIActivityViewController(activityItems: notes, applicationActivities: nil)
-        present(activityController, animated: true)
+        try! realm.write {
+            
+            let newNote = Note()
+            newNote.title = titleText.text
+            newNote.body = noteText.text
+            realm.add(newNote)
+        }
         
+        //notes are added but tableview is not reloading until view is loaded again
+        navigationController?.popViewController(animated: true)
+        
+    
     }
+    
+      
     
     //remove the placeholder text and change the text color to black
     func textViewDidBeginEditing(_ textView: UITextView) {
