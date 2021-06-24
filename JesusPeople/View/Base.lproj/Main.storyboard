@@ -87,7 +87,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57h-Hu-aR2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2678" y="2671"/>
+            <point key="canvasLocation" x="1957" y="2701"/>
         </scene>
         <!--Bible View Controller-->
         <scene sceneID="RAf-OZ-ypM">
@@ -105,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwd-kc-AdN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="2671"/>
+            <point key="canvasLocation" x="181" y="2671"/>
         </scene>
         <!--Notes View Controller-->
         <scene sceneID="YSD-3d-q7h">
@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3M-nD-73V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864" y="2671"/>
+            <point key="canvasLocation" x="1112" y="2688"/>
         </scene>
         <!--Video Player View Controller-->
         <scene sceneID="sx4-Pn-Aqt">
@@ -201,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8B8-dH-SPP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2677" y="3437"/>
+            <point key="canvasLocation" x="1957" y="3471"/>
         </scene>
         <!--Contact Us-->
         <scene sceneID="mUe-aQ-cHC">
@@ -464,28 +464,10 @@
             </objects>
             <point key="canvasLocation" x="-681" y="2671"/>
         </scene>
-        <!--Giving View Controller-->
-        <scene sceneID="OLi-BI-bqi">
-            <objects>
-                <viewController id="4Ai-dn-GiV" customClass="GivingViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DQ2-S8-U4h">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="JnF-cE-2an"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="wGm-sK-ylv">
-                        <barButtonItem key="backBarButtonItem" title="Home" id="A4q-Y4-Cnq"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c4m-Ls-dJk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="177" y="2671"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Cbo-ko-RGn">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wZy-DG-CtN" customClass="TabBarController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wZy-DG-CtN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="hEY-Tb-V2Z">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -671,9 +653,6 @@
                                                 <constraint firstItem="S70-4l-eMJ" firstAttribute="top" secondItem="qZn-Gc-02A" secondAttribute="top" id="ngB-OZ-doz"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="4Ai-dn-GiV" kind="show" id="kSx-1r-UrI"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -714,9 +693,6 @@
                         <color key="barTintColor" red="0.45098039220000002" green="0.36470588240000001" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="9I4-Y0-R7U" kind="relationship" relationship="rootViewController" id="2H0-Fd-ct1"/>
                     </connections>
@@ -743,7 +719,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LnF-q4-XCr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017" y="1949"/>
+            <point key="canvasLocation" x="180" y="1976"/>
         </scene>
         <!--Notes-->
         <scene sceneID="gv8-mP-fng">
@@ -763,7 +739,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1J-yJ-Xir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864" y="1949"/>
+            <point key="canvasLocation" x="1112" y="1975"/>
         </scene>
         <!--Semons-->
         <scene sceneID="3oK-GU-0tj">
@@ -783,7 +759,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Q4-NQ-fNj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2643" y="1949"/>
+            <point key="canvasLocation" x="1957" y="1975"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
