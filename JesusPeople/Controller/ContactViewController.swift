@@ -8,9 +8,10 @@
 import UIKit
 import MapKit
 import CoreLocation
+import MessageUI
 
-class ContactViewController: UIViewController {
-
+class ContactViewController: UIViewController, MFMailComposeViewControllerDelegate {
+    
     @IBOutlet weak var mapView: MKMapView!
     
     let churchLocation = CLLocationCoordinate2D(latitude: Constants.churchLat, longitude: Constants.churchLong)
@@ -33,53 +34,62 @@ class ContactViewController: UIViewController {
     
     @IBAction func callButtonPressed(_ sender: UIButton) {
         if let url = URL(string: "tel://\(Constants.churchPhone)"), UIApplication.shared.canOpenURL(url) {
-             
-                UIApplication.shared.open(url)
-            }
+            
+            UIApplication.shared.open(url)
+        }
     }
     
     @IBAction func directionsButtonPressed(_ sender: UIButton) {
+        showDirections()
+    }
+    
+    
+    func showDirections() {
         //if phone has an google maps app
         if UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!) {
-
-
+            
+            
             if let url = URL(string: "comgooglemaps://?saddr=&daddr=Jesus+People+Chapel+Int'l&directionsmode=driving") {
                 
-                        UIApplication.shared.open(url, options: [:])
-                   }
+                UIApplication.shared.open(url, options: [:])
+            }
             
         }
-              else {
-                // open with apple maps
-                let coordinate = CLLocationCoordinate2DMake(Constants.churchLat,Constants.churchLong)
-                let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
-                mapItem.name = Constants.churchName
-                mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
-                   
-                        }
-
-                }
-       
-    
+        else {
+            // open with apple maps
+            let coordinate = CLLocationCoordinate2DMake(Constants.churchLat,Constants.churchLong)
+            let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
+            mapItem.name = Constants.churchName
+            mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+            
+        }
+        
+    }
     
     @IBAction func emailButtonPressed(_ sender: UIButton) {
-        
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["info@jpcinternational.org"])
+            
+            present(mail, animated: true)
+        } else {
+            //show a real failure alert
+            print("message failed to send")
+        }
+            }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
     }
     
     @IBAction func websiteButtonPressed(_ sender: UIButton) {
         if let url = URL(string: "http://www.jpcinternational.org/"), UIApplication.shared.canOpenURL(url) {
-             
-                UIApplication.shared.open(url)
-            }
+            
+            UIApplication.shared.open(url)
+        }
     }
     
-    @IBAction func instagramButtonPressed(_ sender: UIButton) {
-       
-    }
-    
-    @IBAction func facebookButtonPressed(_ sender: UIButton) {
-        
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let socialVC = segue.destination as! SocialViewController
