@@ -56,7 +56,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="m1c-Gl-LEI">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nkK-rU-OOp"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nkK-rU-OOp">
+                            <connections>
+                                <segue destination="zSA-q6-2u8" kind="show" id="28n-PY-o6B"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="startLabel" destination="xgV-6p-qka" id="ncS-MK-Ty3"/>
@@ -64,7 +68,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEh-2G-gQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="3502"/>
+            <point key="canvasLocation" x="1074" y="2701"/>
         </scene>
         <!--Sermons Table View Controller-->
         <scene sceneID="3su-D0-4RP">
@@ -215,7 +219,6 @@
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="saveButtonPressed:" destination="zSA-q6-2u8" id="uNj-Em-v8D"/>
-                                <segue destination="Rle-Uq-yyM" kind="show" id="P0s-jq-lWf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -226,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3M-nD-73V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="2740"/>
+            <point key="canvasLocation" x="1074" y="3406"/>
         </scene>
         <!--Video Player View Controller-->
         <scene sceneID="sx4-Pn-Aqt">
@@ -792,7 +795,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="zSA-q6-2u8" kind="relationship" relationship="rootViewController" id="lCW-fh-qgH"/>
+                        <segue destination="Rle-Uq-yyM" kind="relationship" relationship="rootViewController" id="T6h-pm-3bP"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1J-yJ-Xir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

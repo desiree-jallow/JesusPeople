@@ -18,22 +18,11 @@ class NotesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //        try! realm.write {
-        //            let allNotes = realm.objects(Note.self)
-        //            realm.delete(allNotes)
-        //        }
-        
-        
+        showStartLabel()
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        
-        if realm.objects(Note.self).count > 0 {
-            startLabel.isHidden = true
-        }
-        
+        super.viewWillAppear(true)
         observeChanges()
     }
     
@@ -61,11 +50,20 @@ class NotesTableViewController: UITableViewController {
                                          with: .automatic)
                 }, completion: { finished in
                     // ...
+                    self?.showStartLabel()
                 })
             case .error(let error):
                 // An error occurred while opening the Realm file on the background worker thread
                 fatalError("\(error)")
             }
+        }
+    }
+    
+    func showStartLabel() {
+        if realm.objects(Note.self).count > 0 {
+            startLabel.isHidden = true
+        } else {
+            startLabel.isHidden = false
         }
     }
     
@@ -92,54 +90,29 @@ class NotesTableViewController: UITableViewController {
     
     
     
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     
+    // Override to support conditional editing of the table view.
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedNote = realm.objects(Note.self)[indexPath.row]
         
         if let viewController = storyboard?.instantiateViewController(identifier: "NotesViewController") as? NotesViewController {
             viewController.noteToEdit = selectedNote
-                navigationController?.pushViewController(viewController, animated: true)
-            }
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-       
-     if editingStyle == .delete {
-                try! realm.write {
-                    let currentNote = realm.objects(Note.self)[indexPath.row]
-                    realm.delete(currentNote)
-                }
-     // Delete the row from the data source
-//     tableView.deleteRows(at: [indexPath], with: .fade)
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-//        observeChanges()
-     }
-     }
-     
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    
-    
+        if editingStyle == .delete {
+            try! realm.write {
+                let currentNote = realm.objects(Note.self)[indexPath.row]
+                realm.delete(currentNote)
+            }
+        }
+    }
 }
