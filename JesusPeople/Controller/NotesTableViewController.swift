@@ -18,7 +18,7 @@ class NotesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showStartLabel()
+       observeChanges()
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -34,7 +34,7 @@ class NotesTableViewController: UITableViewController {
             switch changes {
             case .initial:
                 // Results are now populated and can be accessed without blocking the UI
-                
+                self?.showStartLabel()
                 tableView.reloadData()
                 
             case .update(_, let deletions, let insertions, let modifications):

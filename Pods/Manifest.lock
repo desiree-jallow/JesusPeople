@@ -4,11 +4,11 @@ PODS:
   - GoogleAPIClientForREST/YouTube (1.2.1):
     - GoogleAPIClientForREST/Core
     - GTMSessionFetcher (>= 1.1.7)
-  - GTMSessionFetcher (1.6.1):
-    - GTMSessionFetcher/Full (= 1.6.1)
-  - GTMSessionFetcher/Core (1.6.1)
-  - GTMSessionFetcher/Full (1.6.1):
-    - GTMSessionFetcher/Core (= 1.6.1)
+  - GTMSessionFetcher (1.7.0):
+    - GTMSessionFetcher/Full (= 1.7.0)
+  - GTMSessionFetcher/Core (1.7.0)
+  - GTMSessionFetcher/Full (1.7.0):
+    - GTMSessionFetcher/Core (= 1.7.0)
   - Realm (10.7.4):
     - Realm/Headers (= 10.7.4)
   - Realm/Headers (10.7.4)
@@ -31,11 +31,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   GoogleAPIClientForREST: a8b95a252014ce2e618df6b75dc72eca2c00b4af
-  GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
+  GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
   Realm: f08ce1a85649a41303ecfe1cbd914c62e9e6d710
   RealmSwift: 60ec49d165f23d040ab48811d8dd177e09baf4d3
   youtube-ios-player-helper: 0185c57db23c80d63d6ca11251d110abb8a4ca61
 
 PODFILE CHECKSUM: a89d4d4690f23721d192df999834a667c43c13ed
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
