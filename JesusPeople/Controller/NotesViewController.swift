@@ -11,6 +11,7 @@ import RealmSwift
 class NotesViewController: UIViewController, UITextViewDelegate {
     let realm = try! Realm()
     var notesNotificationToken: NotificationToken?
+    var noteToEdit: Note?
     
     
     @IBOutlet weak var titleText: UITextView!
@@ -20,28 +21,58 @@ class NotesViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         titleText.delegate = self
         noteText.delegate = self
-        noteText.text = "new note..."
-        noteText.textColor = .lightGray
-        titleText.text = "Title"
-        titleText.textColor = .lightGray
         
-        
+        if noteToEdit != nil {
+            noteText.text = noteToEdit?.body
+            titleText.text = noteToEdit?.title
+        } else {
+            noteText.text = "new note..."
+            noteText.textColor = .lightGray
+            titleText.text = "Title"
+            titleText.textColor = .lightGray
+        }
+       
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-        
-        try! realm.write {
-            
-            let newNote = Note()
-            newNote.title = titleText.text
-            newNote.body = noteText.text
-            realm.add(newNote)
+        //observe changes
+        if noteToEdit != nil {
+            observeChange(for: noteToEdit!)
+        } else {
+            try! realm.write {
+                
+                let newNote = Note()
+                newNote.title = titleText.text
+                newNote.body = noteText.text
+                realm.add(newNote)
+            }
         }
+      
         
         //notes are added but tableview is not reloading until view is loaded again
         navigationController?.popViewController(animated: true)
         
     
+    }
+    
+    func observeChange(for note: Note) {
+        notesNotificationToken = note.observe { change in
+                switch change {
+                case .change(let object, let properties):
+                    for property in properties {
+                        print("Property '\(property.name)' of object \(object) changed to '\(property.newValue!)'")
+                    }
+                case .error(let error):
+                    print("An error occurred: \(error)")
+                case .deleted:
+                    print("The object was deleted.")
+                }
+            }
+            // Now update to trigger the notification
+            try! realm.write {
+                note.title = titleText.text
+                note.body = noteText.text
+            }
     }
     
       

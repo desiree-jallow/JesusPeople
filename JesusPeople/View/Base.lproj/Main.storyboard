@@ -56,11 +56,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="m1c-Gl-LEI">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nkK-rU-OOp">
-                            <connections>
-                                <segue destination="zSA-q6-2u8" kind="show" id="4E6-qQ-ZeU"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nkK-rU-OOp"/>
                     </navigationItem>
                     <connections>
                         <outlet property="startLabel" destination="xgV-6p-qka" id="ncS-MK-Ty3"/>
@@ -68,7 +64,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEh-2G-gQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="2701"/>
+            <point key="canvasLocation" x="1074" y="3502"/>
         </scene>
         <!--Sermons Table View Controller-->
         <scene sceneID="3su-D0-4RP">
@@ -171,7 +167,7 @@
         <!--Notes View Controller-->
         <scene sceneID="YSD-3d-q7h">
             <objects>
-                <viewController id="zSA-q6-2u8" customClass="NotesViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zSA-q6-2u8" customClass="NotesViewController" customModule="JesusPeople" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OKe-CO-QrP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,6 +215,7 @@
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="saveButtonPressed:" destination="zSA-q6-2u8" id="uNj-Em-v8D"/>
+                                <segue destination="Rle-Uq-yyM" kind="show" id="P0s-jq-lWf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -229,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3M-nD-73V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="3471"/>
+            <point key="canvasLocation" x="1074" y="2740"/>
         </scene>
         <!--Video Player View Controller-->
         <scene sceneID="sx4-Pn-Aqt">
@@ -795,7 +792,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Rle-Uq-yyM" kind="relationship" relationship="rootViewController" id="NoZ-Dd-3ne"/>
+                        <segue destination="zSA-q6-2u8" kind="relationship" relationship="rootViewController" id="lCW-fh-qgH"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1J-yJ-Xir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
