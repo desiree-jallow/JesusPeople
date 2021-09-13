@@ -15,6 +15,7 @@
 		D7432F7C26555F800044E521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7432F7A26555F800044E521 /* LaunchScreen.storyboard */; };
 		D761D92F2685184000C8D038 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761D92E2685184000C8D038 /* NotesTableViewController.swift */; };
 		D761D9312685205C00C8D038 /* NotesObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761D9302685205C00C8D038 /* NotesObject.swift */; };
+		D761D933268E202E00C8D038 /* ChurchTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761D932268E202D00C8D038 /* ChurchTabController.swift */; };
 		D76DD098268127B50022CFD0 /* WelcomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76DD097268127B50022CFD0 /* WelcomTableViewController.swift */; };
 		D77422E82666A27D00254F68 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77422E72666A27D00254F68 /* WebViewController.swift */; };
 		D77EFE66266045BF006B23FB /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77EFE65266045BF006B23FB /* SocialViewController.swift */; };
@@ -49,6 +50,7 @@
 		D7432F7D26555F800044E521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D761D92E2685184000C8D038 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		D761D9302685205C00C8D038 /* NotesObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesObject.swift; sourceTree = "<group>"; };
+		D761D932268E202D00C8D038 /* ChurchTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchTabController.swift; sourceTree = "<group>"; };
 		D76DD097268127B50022CFD0 /* WelcomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomTableViewController.swift; sourceTree = "<group>"; };
 		D77422E72666A27D00254F68 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D77EFE65266045BF006B23FB /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				D77EFE65266045BF006B23FB /* SocialViewController.swift */,
 				D77422E72666A27D00254F68 /* WebViewController.swift */,
 				D761D92E2685184000C8D038 /* NotesTableViewController.swift */,
+				D761D932268E202D00C8D038 /* ChurchTabController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				D7F688C7266819F200D2C764 /* TextViewExtension.swift in Sources */,
 				D7F436BD265BDF9F002C7E72 /* SermonModel.swift in Sources */,
 				D7F688CD26696D8100D2C764 /* VideoPlayerViewController.swift in Sources */,
+				D761D933268E202E00C8D038 /* ChurchTabController.swift in Sources */,
 				D7F436B2265B29B9002C7E72 /* SermonsDataManager.swift in Sources */,
 				D76DD098268127B50022CFD0 /* WelcomTableViewController.swift in Sources */,
 				D7432F7226555F7C0044E521 /* SceneDelegate.swift in Sources */,
