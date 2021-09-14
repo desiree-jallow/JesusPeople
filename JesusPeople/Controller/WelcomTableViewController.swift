@@ -30,9 +30,10 @@ class WelcomTableViewController: UITableViewController {
         addShadowToLabel(to: ourMinistriesLabel)
         addShadowToLabel(to: bishopsCornerLabel)
         addShadowToLabel(to: givingLabel)
+        navigationController?.navigationBar.topItem?.title = tabBarController?.tabBar.selectedItem?.title
         
-      
     }
+
     func addShadowToLabel(to label: UILabel) {
         label.layer.masksToBounds = false
               label.layer.shadowOffset = CGSize(width: 1, height: 1)

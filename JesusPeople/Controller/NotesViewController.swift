@@ -18,6 +18,8 @@ class NotesViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var noteText: UITextView!
     
     override func viewDidLoad() {
+        navigationController?.navigationBar.topItem?.title = tabBarController?.tabBar.selectedItem?.title
+        
         super.viewDidLoad()
         titleText.delegate = self
         noteText.delegate = self

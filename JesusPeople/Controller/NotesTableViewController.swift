@@ -18,11 +18,14 @@ class NotesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.topItem?.title = tabBarController?.tabBar.selectedItem?.title
        observeChanges()
         
+        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         observeChanges()
     }
     
@@ -87,8 +90,6 @@ class NotesTableViewController: UITableViewController {
         
         return cell
     }
-    
-    
     
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

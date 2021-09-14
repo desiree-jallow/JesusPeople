@@ -18,6 +18,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         webView = WKWebView()
         view = webView
         showSpinner()
+        navigationController?.navigationBar.topItem?.title = tabBarController?.tabBar.selectedItem?.title
 
     }
     
@@ -39,6 +40,12 @@ class WebViewController: UIViewController, WKNavigationDelegate {
                 webView.allowsBackForwardNavigationGestures = true
         }
        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationItem.title = tabBarController?.tabBarItem.title
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
