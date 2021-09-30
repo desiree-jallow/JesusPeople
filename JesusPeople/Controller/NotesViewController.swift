@@ -49,12 +49,7 @@ class NotesViewController: UIViewController, UITextViewDelegate {
                 realm.add(newNote)
             }
         }
-      
-        
-        //notes are added but tableview is not reloading until view is loaded again
         navigationController?.popViewController(animated: true)
-        
-    
     }
     
     func observeChange(for note: Note) {
