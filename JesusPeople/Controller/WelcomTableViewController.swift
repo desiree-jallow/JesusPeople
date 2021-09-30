@@ -54,8 +54,8 @@ class WelcomTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let minRowHeight: CGFloat = 100.0
-        let tHeight = tableView.frame.height
-        let temp = tHeight / 5
+        let tableHeight = tableView.frame.height
+        let temp = tableHeight / 5
         return temp > minRowHeight ? temp : minRowHeight
     }
 
