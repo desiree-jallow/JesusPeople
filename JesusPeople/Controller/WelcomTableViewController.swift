@@ -51,14 +51,13 @@ class WelcomTableViewController: UITableViewController {
         
         return 5
     }
-    
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//    }
-    
-//    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 600
-//    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let minRowHeight: CGFloat = 100.0
+        let tHeight = tableView.frame.height
+        let temp = tHeight / 5
+        return temp > minRowHeight ? temp : minRowHeight
+    }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let givingIndexPath = IndexPath(row: 4, section: 0)
