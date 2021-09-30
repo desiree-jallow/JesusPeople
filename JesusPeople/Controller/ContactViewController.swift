@@ -29,7 +29,6 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
         mapView.addAnnotation(annotation)
         mapView.setCenter(churchLocation, animated: true)
         
-        
     }
     
     @IBAction func callButtonPressed(_ sender: UIButton) {

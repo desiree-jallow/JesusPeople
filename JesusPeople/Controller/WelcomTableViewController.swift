@@ -31,7 +31,6 @@ class WelcomTableViewController: UITableViewController {
         addShadowToLabel(to: bishopsCornerLabel)
         addShadowToLabel(to: givingLabel)
         navigationController?.navigationBar.topItem?.title = tabBarController?.tabBar.selectedItem?.title
-        
     }
 
     func addShadowToLabel(to label: UILabel) {
@@ -44,14 +43,22 @@ class WelcomTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+       
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return 5
     }
+    
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableView.automaticDimension
+//    }
+    
+//    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 600
+//    }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let givingIndexPath = IndexPath(row: 4, section: 0)

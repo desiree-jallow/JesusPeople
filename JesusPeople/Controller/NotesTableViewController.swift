@@ -20,8 +20,6 @@ class NotesTableViewController: UITableViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.topItem?.title = tabBarController?.tabBar.selectedItem?.title
        observeChanges()
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
