@@ -23,7 +23,7 @@ class NotesViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         titleText.delegate = self
         noteText.delegate = self
-        
+       
         if noteToEdit != nil {
             noteText.text = noteToEdit?.body
             titleText.text = noteToEdit?.title
@@ -78,7 +78,7 @@ class NotesViewController: UIViewController, UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == .lightGray {
             textView.text = nil
-            textView.textColor = .black
+            textView.textColor = .label
         
         }
         
