@@ -25,9 +25,9 @@ class SermonsTableViewController: UITableViewController  {
             
             SermonsDataManger.instance.performRequest(with: endpoint, completionHandler: {
                 
-                DispatchQueue.main.async {
-                    tableView.reloadData()
-                    spinner.stopAnimating()
+                DispatchQueue.main.async  {
+                    self.tableView.reloadData()
+                    self.spinner.stopAnimating()
                 }
                 
             })

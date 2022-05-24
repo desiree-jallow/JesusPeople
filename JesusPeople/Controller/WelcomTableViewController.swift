@@ -31,6 +31,7 @@ class WelcomTableViewController: UITableViewController {
         addShadowToLabel(to: bishopsCornerLabel)
         addShadowToLabel(to: givingLabel)
         navigationController?.navigationBar.topItem?.title = tabBarController?.tabBar.selectedItem?.title
+        self.navigationItem.rightBarButtonItem = nil
     }
 
     func addShadowToLabel(to label: UILabel) {
