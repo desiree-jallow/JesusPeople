@@ -56,7 +56,7 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
     
     @IBAction func emailButtonPressed(_ sender: UIButton) {
         sendEmail()
-            }
+    }
     
     
     @IBAction func websiteButtonPressed(_ sender: UIButton) {
